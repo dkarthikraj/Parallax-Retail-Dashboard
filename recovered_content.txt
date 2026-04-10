@@ -1,0 +1,809 @@
+﻿Created At: 2026-09-23T16:01:51+05:30
+Completed At: 2026-09-23T16:01:51+05:30
+File Path: `file:///c:/Users/chira/.gemini/antigravity-ide/scratch/parallax-retail-intelligence/index.html`
+Total Lines: 1026
+Total Bytes: 48093
+Showing lines 1 to 800
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+1: <!DOCTYPE html>
+2: <html lang="en">
+3: <head>
+4:   <meta charset="UTF-8">
+5:   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+6:   <title>PARALLAX | Qualcomm Edge Retail Intelligence</title>
+7:   
+8:   <!-- Modern Google Fonts -->
+9:   <link rel="preconnect" href="https://fonts.googleapis.com">
+10:   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+11:   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700;800&family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+12:   
+13:   <link rel="stylesheet" href="styles/main.css">
+14: </head>
+15: <body>
+16: 
+17:   <div class="app-container">
+18:     
+19:     <!-- ===================================================================
+20:          SIMPLE HEADER
+21:          =================================================================== -->
+22:     <header class="top-header">
+23:       <div class="header-inner">
+24:         
+25:         <div class="brand-section">
+26:           <div class="brand-title-group">
+27:             <h1>
+28:               PARALLAX
+29:               <span class="qc-tag">QUALCOMM EDGE AI</span>
+30:             </h1>
+31:             <div class="brand-subtitle">AI-Powered Retail Intelligence Platform &bull; Smart India Hackathon 2026</div>
+32:           </div>
+33:         </div>
+34: 
+35:         <!-- Clean Telemetry Strip -->
+36:         <div class="telemetry-strip">
+37:           <div class="telemetry-node">
+38:             <span class="pulse-indicator"></span>
+39:             <span>Hexagonâ„¢ NPU:</span>
+40:             <strong>52%</strong>
+41:           </div>
+42:           <span style="color: #cbd5e1;">|</span>
+43:           <div class="telemetry-node">
+44:             <span>Inference:</span>
+45:             <strong style="color: var(--color-blue);">60.2 FPS</strong>
+46:           </div>
+47:           <span style="color: #cbd5e1;">|</span>
+48:           <div class="telemetry-node">
+49:             <span>Latency:</span>
+50:             <strong style="color: var(--color-green);">3.8 ms</strong>
+51:           </div>
+52:           <span style="color: #cbd5e1;">|</span>
+53:           <div class="telemetry-node">
+54:             <span>DPDP Privacy:</span>
+55:             <strong style="color: var(--color-green);">100% On-Device</strong>
+56:           </div>
+57:         </div>
+58: 
+59:         <div>
+60:           <span class="store-badge">ðŸ“ Store #104 (Indiranagar, Bengaluru)</span>
+61:         </div>
+62: 
+63:       </div>
+64:     </header>
+65: 
+66:     <!-- ===================================================================
+67:          CLEAN NAVIGATION TABS
+68:          =================================================================== -->
+69:     <nav class="nav-tab-strip">
+70:       <div class="nav-tabs-inner">
+71:         <button class="nav-tab-btn active" data-tab="tab-overview" id="navTabOverview">
+72:           Live Command Center
+73:         </button>
+74:         <button class="nav-tab-btn" data-tab="tab-inventory" id="navTabInventory">
+75:           Inventory & Out-of-Stock
+76:           <span class="badge-alert">2 ALERTS</span>
+77:         </button>
+78:         <button class="nav-tab-btn" data-tab="tab-heatmap" id="navTabHeatmap">
+79:           Store Heatmap (Video Feed)
+80:         </button>
+81:         <button class="nav-tab-btn" data-tab="tab-queue" id="navTabQueue">
+82:           Billing & Queues
+83:         </button>
+84:         <button class="nav-tab-btn" data-tab="tab-architecture" id="navTabArchitecture">
+85:           Qualcomm Edge Hardware
+86:         </button>
+87:       </div>
+88:     </nav>
+89: 
+90:     <!-- ===================================================================
+91:          MAIN VIEWPORT
+92:          =================================================================== -->
+93:     <main class="main-content">
+94:       
+95:       <!-- ===============================================================
+96:            TAB 1: LIVE COMMAND CENTER (OVERVIEW)
+97:            =============================================================== -->
+98:       <section class="tab-pane active" id="tab-overview">
+99:         
+100:         <!-- Hero Metrics Ribbon (Important Numbers in Bold) -->
+101:         <div class="kpi-grid">
+102:           
+103:           <div class="kpi-card">
+104:             <div class="kpi-label">Active Shoppers</div>
+105:             <div class="kpi-value-row">
+106:               <span class="kpi-value bold-number" id="kpiActiveShoppers">58</span>
+107:               <span class="kpi-subtext">customers inside</span>
+108:             </div>
+109:             <div class="kpi-subtext"><b>+14%</b> vs yesterday &bull; <b>184</b> footfall/hr</div>
+110:           </div>
+111: 
+112:           <div class="kpi-card" style="border-left: 4px solid var(--color-red);">
+113:             <div class="kpi-label" style="color: var(--color-red);">Out-of-Stock Alerts</div>
+114:             <div class="kpi-value-row">
+115:               <span class="kpi-value bold-number" style="color: var(--color-red);" id="kpiAnomaliesCount">2 SKUs</span>
+116:             </div>
+117:             <div class="kpi-subtext"><b style="color: var(--color-red);">Shelf = 0, Backroom > 0</b> &bull; <b>â‚¹5,190/hr</b> loss</div>
+118:           </div>
+119: 
+120:           <div class="kpi-card" style="border-left: 4px solid var(--color-amber);">
+121:             <div class="kpi-label">Average Queue Wait</div>
+122:             <div class="kpi-value-row">
+123:               <span class="kpi-value bold-number" id="kpiAvgWait">2.8 min</span>
+124:             </div>
+125:             <div class="kpi-subtext"><b style="color: var(--color-amber);">Lane 2 spike (4.4 min)</b> &bull; Target: <b>&lt; 3.0 min</b></div>
+126:           </div>
+127: 
+128:           <div class="kpi-card" style="border-left: 4px solid var(--color-green);">
+129:             <div class="kpi-label">Bandwidth Saved on Edge</div>
+130:             <div class="kpi-value-row">
+131:               <span class="kpi-value bold-number" style="color: var(--color-green);">94.2%</span>
+132:             </div>
+133:             <div class="kpi-subtext"><b>482.6 GB/day</b> offload &bull; <b>$3,840/mo</b> saved</div>
+134:           </div>
+135: 
+136:         </div>
+137: 
+138:         <!-- 2-Column Split: Video Surveillance + Video Heatmap VS Proactive Actions -->
+139:         <div class="overview-grid">
+140:           
+141:           <!-- LEFT COLUMN: Real Video Streams -->
+142:           <div>
+143:             
+144:             <!-- Video Feed 1: Vision AI Stream (Real Video of People Walking) -->
+145:             <div class="card-panel">
+146:               <div class="card-panel-header">
+147:                 <h2>Live Vision AI Stream</h2>
+148:                 <div class="cam-tabs">
+149:                   <button class="cam-btn active" onclick="switchCam('CAM-08', this)">CAM-08 (Aisle 3 Chilled CPG)</button>
+150:                   <button class="cam-btn" onclick="switchCam('CAM-13', this)">CAM-13 (Checkout)</button>
+151:                   <button class="cam-btn" onclick="switchCam('CAM-05', this)">CAM-05 (Dairy)</button>
+152:                   <button class="cam-btn" onclick="switchCam('CAM-01', this)">CAM-01 (Entrance)</button>
+153:                 </div>
+154:               </div>
+155: 
+156:               <div class="video-container">
+157:                 <!-- Real Video of People Walking (Untouched & Playing Smoothly) -->
+158:                 <video id="realCameraVideo" src="assets/walking_feed.webm" autoplay loop muted playsinline class="camera-real-video"></video>
+159:                 
+160:                 <!-- Transparent AI Overlay -->
+161:                 <canvas id="cameraVisionCanvas" class="canvas-overlay"></canvas>
+162:                 
+163:                 <div class="video-hud-header">
+164:                   <span class="rec-dot"></span>
+165:                   <span id="camHudId">CAM-08 â€¢ AISLE 3 (CHILLED BEVERAGES)</span>
+166:                 </div>
+167: 
+168:                 <div class="video-hud-footer">
+169:                   <span>QUALCOMM HEXAGONâ„¢ NPU: <b>60.2 FPS</b> (INT8)</span>
+170:                   <span><b>ZERO CLOUD VIDEO STREAMING</b></span>
+171:                 </div>
+172:               </div>
+173: 
+174:               <div class="video-controls">
+175:                 <div style="display: flex; gap: 14px; align-items: center;">
+176:                   <label style="cursor: pointer;"><input type="checkbox" checked id="toggleBBoxes" onchange="toggleCamOverlay('boxes')"> <b>Bounding Boxes</b></label>
+177:                   <label style="cursor: pointer;"><input type="checkbox" checked id="toggleTracking" onchange="toggleCamOverlay('tracking')"> <b>Tracking IDs</b></label>
+178:                   <label style="cursor: pointer;"><input type="checkbox" checked id="toggleSeg" onchange="toggleCamOverlay('seg')"> <b>Shelf Alerts</b></label>
+179:                 </div>
+180:                 <div style="color: var(--text-muted); font-size: 0.78rem;">
+181:                   Gateway: <b>Qualcomm RB5 #02</b>
+182:                 </div>
+183:               </div>
+184:             </div>
+185: 
+186:             <!-- Video Feed 2: Live Video Thermal Heatmap (Real Video with Thermal Overlay) -->
+187:             <div class="card-panel">
+188:               <div class="card-panel-header">
+189:                 <div>
+190:                   <h2>Live Store Heatmap (Video Feed)</h2>
+191:                   <div style="font-size: 0.76rem; color: var(--text-muted);">Real-time customer dwell density tracked over live video</div>
+192:                 </div>
+193:                 <div style="font-size: 0.8rem;">
+194:                   Peak Traffic: <b style="color: var(--color-red);">Aisle 3 (5.4 min dwell)</b>
+195:                 </div>
+196:               </div>
+197: 
+198:               <div class="video-container">
+199:                 <!-- Video for Heatmap -->
+200:                 <video id="heatmapVideo" src="assets/walking_feed.webm" autoplay loop muted playsinline class="camera-real-video"></video>
+201:                 
+202:                 <!-- Dynamic Thermal Heatmap Overlay Canvas -->
+203:                 <canvas id="heatmapVideoCanvas" class="canvas-overlay"></canvas>
+204: 
+205:                 <div class="video-hud-footer" style="bottom: 10px;">
+206:                   <span>HEAT DENSITY: <b style="color: #38bdf8;">COLD</b> &rarr; <b style="color: #10b981;">MODERATE</b> &rarr; <b style="color: #dc2626;">HOTSPOT</b></span>
+207:                   <span>TRACKED PATRONS: <b style="color: #ffffff;">58 LIVE</b></span>
+208:                 </div>
+209:               </div>
+210: 
+211:               <div class="video-controls">
+212:                 <div style="display: flex; gap: 14px; align-items: center;">
+213:                   <label style="cursor: pointer;"><input type="checkbox" checked id="toggleThermal" onchange="toggleHeatmapOpt('thermal')"> <b>Thermal Heatmap</b></label>
+214:                   <label style="cursor: pointer;"><input type="checkbox" checked id="toggleTrails" onchange="toggleHeatmapOpt('trails')"> <b>Motion Trails</b></label>
+215:                   <label style="cursor: pointer;"><input type="checkbox" checked id="toggleZoneLabels" onchange="toggleHeatmapOpt('labels')"> <b>Zone Dwell Tags</b></label>
+216:                 </div>
+217:                 <div style="color: var(--text-muted); font-size: 0.78rem;">
+218:                   Camera: <b>Overhead CAM-03</b>
+219:                 </div>
+220:               </div>
+221:             </div>
+222: 
+223:           </div>
+224: 
+225:           <!-- RIGHT COLUMN: Action Required (Recommendations with Important Texts & Numbers in Bold) -->
+226:           <div class="card-panel">
+227:             <div class="card-panel-header">
+228:               <h2>Action Required (Live AI Decisions)</h2>
+229:               <div style="font-size: 0.78rem; color: var(--text-muted);">
+230:                 <b>What &bull; Why &bull; Next Action</b>
+231:               </div>
+232:             </div>
+233: 
+234:             <div class="action-items-list">
+235:               
+236:               <!-- Card 1: Critical Stock-Out (Red Bull) -->
+237:               <div class="action-card critical" id="cardRec101">
+238:                 <div class="action-card-top">
+239:                   <span class="badge-status red">CRITICAL STOCK-OUT</span>
+240:                   <span style="font-size: 0.72rem; color: var(--text-muted);">Just now</span>
+241:                 </div>
+242: 
+243:                 <div class="action-card-title">Red Bull 250ml: Shelf Stock Empty</div>
+244: 
+245:                 <div class="triad-box">
+246:                   <div class="triad-row">
+247:                     <span class="triad-tag">WHAT:</span>
+248:                     <div>Shelf 3B is at <b>0 cans</b>, but <b>48 cans</b> are sitting in <b>Backroom Bay R-04</b>.</div>
+249:                   </div>
+250:                   <div class="triad-row">
+251:                     <span class="triad-tag">WHY:</span>
+252:                     <div>Footfall surge in Aisle 3 (<b>22 shoppers in 12 mins</b>) depleted the shelf.</div>
+253:                   </div>
+254:                   <div class="triad-row">
+255:                     <span class="triad-tag">ACTION:</span>
+256:                     <div>Dispatch <b>Rahul Sen</b> to restock <b>24 cans</b> from Bay R-04. Prevents <b>â‚¹2,250/hr</b> loss.</div>
+257:                   </div>
+258:                 </div>
+259: 
+260:                 <div class="action-footer">
+261:                   <button class="primary-btn" onclick="demoDispatchAssociate('Rahul Sen', 'Bay R-04', 'Red Bull 250ml', 'cardRec101')">
+262:                     Dispatch Rahul Sen (Bay R-04)
+263:                   </button>
+264:                   <button class="dismiss-btn" onclick="dismissCard('cardRec101')">Dismiss</button>
+265:                 </div>
+266:               </div>
+267: 
+268:               <!-- Card 2: Queue Congestion Predicted -->
+269:               <div class="action-card warning" id="cardRec102">
+270:                 <div class="action-card-top">
+271:                   <span class="badge-status amber">QUEUE WARNING</span>
+272:                   <span style="font-size: 0.72rem; color: var(--text-muted);">2 mins ago</span>
+273:                 </div>
+274: 
+275:                 <div class="action-card-title">Billing Queue Congestion Predicted</div>
+276: 
+277:                 <div class="triad-box">
+278:                   <div class="triad-row">
+279:                     <span class="triad-tag">WHAT:</span>
+280:                     <div>Counter 2 wait time reached <b>4.4 minutes</b> with <b>6 customers</b> in line.</div>
+281:                   </div>
+282:                   <div class="triad-row">
+283:                     <span class="triad-tag">WHY:</span>
+284:                     <div>Edge AI detected <b>7 large shopping carts</b> approaching checkout in <b>3 minutes</b>.</div>
+285:                   </div>
+286:                   <div class="triad-row">
+287:                     <span class="triad-tag">ACTION:</span>
+288:                     <div>Open <b>Counter 5 (Standby)</b>. Alert cashier <b>Maya K.</b> to log in now.</div>
+289:                   </div>
+290:                 </div>
+291: 
+292:                 <div class="action-footer">
+293:                   <button class="primary-btn" onclick="demoOpenCounter(5, 'Maya K.', 'cardRec102')">
+294:                     Open Counter 5 (Notify Maya K.)
+295:                   </button>
+296:                   <button class="dismiss-btn" onclick="dismissCard('cardRec102')">Dismiss</button>
+297:                 </div>
+298:               </div>
+299: 
+300:               <!-- Card 3: Misplaced Item -->
+301:               <div class="action-card info" id="cardRec103">
+302:                 <div class="action-card-top">
+303:                   <span class="badge-status" style="background: #ede9fe; color: #6d28d9;">MISPLACED ITEM</span>
+304:                   <span style="font-size: 0.72rem; color: var(--text-muted);">6 mins ago</span>
+305:                 </div>
+306: 
+307:                 <div class="action-card-title">High-Value Item Abandoned in Wrong Aisle</div>
+308: 
+309:                 <div class="triad-box">
+310:                   <div class="triad-row">
+311:                     <span class="triad-tag">WHAT:</span>
+312:                     <div><b>Extra Virgin Olive Oil (â‚¹650)</b> was placed in <b>Aisle 4 Cereals bay</b>.</div>
+313:                   </div>
+314:                   <div class="triad-row">
+315:                     <span class="triad-tag">WHY:</span>
+316:                     <div>Customer abandoned product on cereal shelf after picking an alternative.</div>
+317:                   </div>
+318:                   <div class="triad-row">
+319:                     <span class="triad-tag">ACTION:</span>
+320:                     <div>Task floor runner to return item to <b>Gourmet Bay 2D</b> before damage occurs.</div>
+321:                   </div>
+322:                 </div>
+323: 
+324:                 <div class="action-footer">
+325:                   <button class="primary-btn" onclick="demoResolveMisplace('cardRec103')">
+326:                     Assign Retrieval Runner
+327:                   </button>
+328:                   <button class="dismiss-btn" onclick="dismissCard('cardRec103')">Dismiss</button>
+329:                 </div>
+330:               </div>
+331: 
+332:               <!-- Card 4: Cold Zone Underperformance -->
+333:               <div class="action-card" id="cardRec104" style="border-left: 4px solid var(--color-blue);">
+334:                 <div class="action-card-top">
+335:                   <span class="badge-status" style="background: var(--color-blue-light); color: var(--color-blue-dark);">COLD ZONE</span>
+336:                   <span style="font-size: 0.72rem; color: var(--text-muted);">14 mins ago</span>
+337:                 </div>
+338: 
+339:                 <div class="action-card-title">Aisle 4 (Breakfast Cereals) Traffic Low</div>
+340: 
+341:                 <div class="triad-box">
+342:                   <div class="triad-row">
+343:                     <span class="triad-tag">WHAT:</span>
+344:                     <div>Footfall dropped <b>42% below daily average</b>. Average dwell time is only <b>1.5 minutes</b>.</div>
+345:                   </div>
+346:                   <div class="triad-row">
+347:                     <span class="triad-tag">WHY:</span>
+348:                     <div>No promotional endcap display and poor rear illumination detected.</div>
+349:                   </div>
+350:                   <div class="triad-row">
+351:                     <span class="triad-tag">ACTION:</span>
+352:                     <div>Push dynamic digital promo signage: <b>Muesli + Almond Milk 20% bundle discount</b>.</div>
+353:                   </div>
+354:                 </div>
+355: 
+356:                 <div class="action-footer">
+357:                   <button class="primary-btn" onclick="showToast('ðŸ“‹ Promotional signage pushed to Aisle 4 display.', 'success')">
+358:                     Push Signage Promo
+359:                   </button>
+360:                   <button class="dismiss-btn" onclick="dismissCard('cardRec104')">Dismiss</button>
+361:                 </div>
+362:               </div>
+363: 
+364:             </div>
+365:           </div>
+366: 
+367:         </div>
+368: 
+369:       </section>
+370: 
+371:       <!-- ===============================================================
+372:            TAB 2: INVENTORY & OUT-OF-STOCK
+373:            =============================================================== -->
+374:       <section class="tab-pane" id="tab-inventory">
+375:         
+376:         <div class="anomaly-callout">
+377:           <div>
+378:             <div style="font-size: 1.05rem; font-weight: 800; color: #991b1b; margin-bottom: 2px;">
+379:               Critical Retail Problem: Shelf Stock = 0, Backroom Stock &gt; 0
+380:             </div>
+381:             <div style="font-size: 0.85rem; color: #475569;">
+382:               The physical shelf is empty, but the ERP database shows inventory exists in the store. 
+383:               Customers cannot find the item, leading to <b>phantom lost revenue</b>.
+384:             </div>
+385:           </div>
+386:           <div style="text-align: right;">
+387:             <div class="bold-number" style="font-size: 1.6rem; color: var(--color-red);">â‚¹5,190 / hr</div>
+388:             <div style="font-size: 0.72rem; font-weight: 700; color: #991b1b; text-transform: uppercase;">Lost Revenue Rate</div>
+389:           </div>
+390:         </div>
+391: 
+392:         <div class="card-panel">
+393:           <div class="card-panel-header">
+394:             <h2>Real-Time Shelf Inventory & Planogram Compliance</h2>
+395:             <div style="font-size: 0.8rem; color: var(--text-muted);">
+396:               Vision AI facing count vs Backroom ERP data
+397:             </div>
+398:           </div>
+399: 
+400:           <table class="simple-table">
+401:             <thead>
+402:               <tr>
+403:                 <th>Product Name</th>
+404:                 <th>Aisle & Bay Location</th>
+405:                 <th>Shelf Stock</th>
+406:                 <th>Backroom Stock</th>
+407:                 <th>Hourly Velocity</th>
+408:                 <th>Lost Rev / Hr</th>
+409:                 <th>Status</th>
+410:                 <th>Action</th>
+411:               </tr>
+412:             </thead>
+413:             <tbody>
+414:               
+415:               <!-- Red Bull -->
+416:               <tr id="row-SKU-8041">
+417:                 <td>
+418:                   <b>Red Bull Energy Drink (250ml)</b>
+419:                   <div style="font-size: 0.72rem; color: var(--text-muted);">SKU-8041 &bull; Beverages</div>
+420:                 </td>
+421:                 <td>
+422:                   <b>Aisle 3 (Chilled CPG)</b>
+423:                   <div style="font-size: 0.72rem; color: var(--text-muted);">Bay 3B &bull; Level 3</div>
+424:                 </td>
+425:                 <td>
+426:                   <b style="font-size: 1.1rem; color: var(--color-red);">0 units</b>
+427:                 </td>
+428:                 <td>
+429:                   <b style="font-size: 1.1rem; color: var(--color-blue-dark);">48 units</b>
+430:                   <div style="font-size: 0.72rem; color: var(--text-muted);">Bay R-04</div>
+431:                 </td>
+432:                 <td><b>18 cans/hr</b></td>
+433:                 <td><b style="color: var(--color-red);">â‚¹2,250</b></td>
+434:                 <td><span class="badge-status red">CRITICAL OOS</span></td>
+435:                 <td>
+436:                   <button class="primary-btn" onclick="demoRestockTable('SKU-8041', 'Red Bull 250ml', 'Bay R-04')">
+437:                     Restock 24 Units
+438:                   </button>
+439:                 </td>
+440:               </tr>
+441: 
+442:               <!-- Arabica Coffee -->
+443:               <tr id="row-SKU-5521">
+444:                 <td>
+445:                   <b>Single Origin Arabica Beans (250g)</b>
+446:                   <div style="font-size: 0.72rem; color: var(--text-muted);">SKU-5521 &bull; Beverages</div>
+447:                 </td>
+448:                 <td>
+449:                   <b>Aisle 3 (Coffee & Tea)</b>
+450:                   <div style="font-size: 0.72rem; color: var(--text-muted);">Bay 3A &bull; Level 2</div>
+451:                 </td>
+452:                 <td>
+453:                   <b style="font-size: 1.1rem; color: var(--color-red);">0 units</b>
+454:                 </td>
+455:                 <td>
+456:                   <b style="font-size: 1.1rem; color: var(--color-blue-dark);">16 packs</b>
+457:                   <div style="font-size: 0.72rem; color: var(--text-muted);">Bay R-03</div>
+458:                 </td>
+459:                 <td><b>6 packs/hr</b></td>
+460:                 <td><b style="color: var(--color-red);">â‚¹2,940</b></td>
+461:                 <td><span class="badge-status red">CRITICAL OOS</span></td>
+462:                 <td>
+463:                   <button class="primary-btn" onclick="demoRestockTable('SKU-5521', 'Arabica Beans', 'Bay R-03')">
+464:                     Restock 12 Units
+465:                   </button>
+466:                 </td>
+467:               </tr>
+468: 
+469:               <!-- Oat Milk -->
+470:               <tr>
+471:                 <td>
+472:                   <b>Oat Milk Barista Edition (1L)</b>
+473:                   <div style="font-size: 0.72rem; color: var(--text-muted);">SKU-3120 &bull; Dairy</div>
+474:                 </td>
+475:                 <td>
+476:                   <b>Aisle 2 (Dairy)</b>
+477:                   <div style="font-size: 0.72rem; color: var(--text-muted);">Bay 2A &bull; Level 2</div>
+478:                 </td>
+479:                 <td>
+480:                   <b style="font-size: 1.1rem; color: var(--color-amber);">3 units</b>
+481:                 </td>
+482:                 <td>
+483:                   <b style="font-size: 1.1rem; color: var(--text-main);">36 units</b>
+484:                   <div style="font-size: 0.72rem; color: var(--text-muted);">Bay R-01</div>
+485:                 </td>
+486:                 <td><b>8 units/hr</b></td>
+487:                 <td><b style="color: var(--color-amber);">â‚¹960</b></td>
+488:                 <td><span class="badge-status amber">LOW STOCK</span></td>
+489:                 <td>
+490:                   <button class="dismiss-btn" onclick="showToast('Scheduled replenishment task created.', 'success')">
+491:                     Queue Restock
+492:                   </button>
+493:                 </td>
+494:               </tr>
+495: 
+496:               <!-- Olive Oil -->
+497:               <tr>
+498:                 <td>
+499:                   <b>Extra Virgin Olive Oil (500ml)</b>
+500:                   <div style="font-size: 0.72rem; color: var(--text-muted);">SKU-9942 &bull; Gourmet</div>
+501:                 </td>
+502:                 <td>
+503:                   <b>Aisle 2 (Gourmet Oils)</b>
+504:                   <div style="font-size: 0.72rem; color: #7c3aed; font-weight: 700;">Found in Aisle 4 Cereals!</div>
+505:                 </td>
+506:                 <td>
+507:                   <b style="font-size: 1.1rem; color: var(--text-main);">12 units</b>
+508:                 </td>
+509:                 <td>
+510:                   <b style="font-size: 1.1rem; color: var(--text-main);">20 units</b>
+511:                 </td>
+512:                 <td><b>3 units/hr</b></td>
+513:                 <td><b>â‚¹0</b></td>
+514:                 <td><span class="badge-status" style="background: #ede9fe; color: #6d28d9;">MISPLACED</span></td>
+515:                 <td>
+516:                   <button class="dismiss-btn" onclick="showToast('Floor runner assigned to return Olive Oil.', 'success')">
+517:                     Relocate SKU
+518:                   </button>
+519:                 </td>
+520:               </tr>
+521: 
+522:               <!-- Dark Chocolate -->
+523:               <tr>
+524:                 <td>
+525:                   <b>Dark Chocolate 85% Sea Salt (100g)</b>
+526:                   <div style="font-size: 0.72rem; color: var(--text-muted);">SKU-4402 &bull; Sweets</div>
+527:                 </td>
+528:                 <td>
+529:                   <b>Aisle 5 (Impulse)</b>
+530:                   <div style="font-size: 0.72rem; color: var(--text-muted);">Bay 5B &bull; Level 3</div>
+531:                 </td>
+532:                 <td>
+533:                   <b style="font-size: 1.1rem; color: var(--color-green);">18 units</b>
+534:                 </td>
+535:                 <td>
+536:                   <b style="font-size: 1.1rem; color: var(--text-main);">60 units</b>
+537:                 </td>
+538:                 <td><b>14 units/hr</b></td>
+539:                 <td><b>â‚¹0</b></td>
+540:                 <td><span class="badge-status green">HEALTHY</span></td>
+541:                 <td>
+542:                   <span style="color: var(--color-green); font-weight: 700; font-size: 0.8rem;">âœ“ Optimal</span>
+543:                 </td>
+544:               </tr>
+545: 
+546:             </tbody>
+547:           </table>
+548:         </div>
+549: 
+550:       </section>
+551: 
+552:       <!-- ===============================================================
+553:            TAB 3: STORE HEATMAP (VIDEO FEED)
+554:            =============================================================== -->
+555:       <section class="tab-pane" id="tab-heatmap">
+556:         
+557:         <div style="display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px; margin-bottom: 24px;">
+558:           
+559:           <!-- Large Heatmap Video Viewport -->
+560:           <div class="card-panel">
+561:             <div class="card-panel-header">
+562:               <h2>CCTV Thermal Density Surveillance (CAM-03)</h2>
+563:               <div style="font-size: 0.8rem; color: var(--text-muted);">
+564:                 Hexagon NPU Thermal False-Color Layer
+565:               </div>
+566:             </div>
+567: 
+568:             <div class="video-container" style="height: 440px;">
+569:               <video id="heatmapVideoDedicated" src="assets/walking_feed.webm" autoplay loop muted playsinline class="camera-real-video"></video>
+570:               <canvas id="heatmapVideoCanvasDedicated" class="canvas-overlay"></canvas>
+571: 
+572:               <div class="video-hud-header">
+573:                 <span class="rec-dot"></span>
+574:                 <span>OVERHEAD CAM-03 â€¢ STORE AISLE DWELL HEATMAP</span>
+575:               </div>
+576: 
+577:               <div class="video-hud-footer">
+578:                 <span>FPS: <b>60.2</b> &bull; DWELL ALGORITHM: <b>QUALCOMM BYTE-TRACK</b></span>
+579:                 <span>STATUS: <b>REAL-TIME THERMAL VIDEO</b></span>
+580:               </div>
+581:             </div>
+582:           </div>
+583: 
+584:           <!-- Aisle Dwell Time Matrix & Bold Numbers -->
+585:           <div class="card-panel">
+586:             <div class="card-panel-header">
+587:               <h2>Aisle Traffic & Dwell Time Rankings</h2>
+588:               <span class="qc-tag">LIVE STATS</span>
+589:             </div>
+590: 
+591:             <div style="padding: 20px; display: flex; flex-direction: column; gap: 16px;">
+592:               
+593:               <div>
+594:                 <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+595:                   <b>Aisle 3: Chilled CPG & Beverages</b>
+596:                   <b style="color: var(--color-red);">5.4 min avg &bull; 205/hr</b>
+597:                 </div>
+598:                 <div style="height: 10px; background: #e2e8f0; border-radius: 5px; overflow: hidden;">
+599:                   <div style="width: 95%; height: 100%; background: var(--color-red);"></div>
+600:                 </div>
+601:               </div>
+602: 
+603:               <div>
+604:                 <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+605:                   <b>Aisle 1: Fresh Produce & Artisan Bakery</b>
+606:                   <b style="color: var(--color-green);">4.6 min avg &bull; 142/hr</b>
+607:                 </div>
+608:                 <div style="height: 10px; background: #e2e8f0; border-radius: 5px; overflow: hidden;">
+609:                   <div style="width: 78%; height: 100%; background: var(--color-green);"></div>
+610:                 </div>
+611:               </div>
+612: 
+613:               <div>
+614:                 <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+615:                   <b>Checkout Zone (Lanes 1-6)</b>
+616:                   <b style="color: var(--color-amber);">3.8 min avg &bull; 175/hr</b>
+617:                 </div>
+618:                 <div style="height: 10px; background: #e2e8f0; border-radius: 5px; overflow: hidden;">
+619:                   <div style="width: 65%; height: 100%; background: var(--color-amber);"></div>
+620:                 </div>
+621:               </div>
+622: 
+623:               <div>
+624:                 <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+625:                   <b>Aisle 2: Dairy & Plant Milks</b>
+626:                   <b style="color: var(--color-blue);">3.2 min avg &bull; 118/hr</b>
+627:                 </div>
+628:                 <div style="height: 10px; background: #e2e8f0; border-radius: 5px; overflow: hidden;">
+629:                   <div style="width: 55%; height: 100%; background: var(--color-blue);"></div>
+630:                 </div>
+631:               </div>
+632: 
+633:               <div>
+634:                 <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+635:                   <b>Aisle 4: Breakfast Cereals (Cold Zone)</b>
+636:                   <b style="color: var(--text-muted);">1.5 min avg &bull; 62/hr</b>
+637:                 </div>
+638:                 <div style="height: 10px; background: #e2e8f0; border-radius: 5px; overflow: hidden;">
+639:                   <div style="width: 25%; height: 100%; background: #94a3b8;"></div>
+640:                 </div>
+641:               </div>
+642: 
+643:             </div>
+644:           </div>
+645: 
+646:         </div>
+647: 
+648:       </section>
+649: 
+650:       <!-- ===============================================================
+651:            TAB 4: BILLING & QUEUES
+652:            =============================================================== -->
+653:       <section class="tab-pane" id="tab-queue">
+654:         
+655:         <div class="anomaly-callout" style="background: var(--color-amber-light); border-color: #fde68a; border-left-color: var(--color-amber);">
+656:           <div>
+657:             <div style="font-size: 1.05rem; font-weight: 800; color: #92400e; margin-bottom: 2px;">
+658:               Predictive Bottleneck: Counter 2 Nearing Congestion
+659:             </div>
+660:             <div style="font-size: 0.85rem; color: #78350f;">
+661:               Wait time is <b>4.4 minutes</b>. 7 shopping carts are heading to checkout. Opening standby Counter 5 will drop wait time to <b>1.8 minutes</b>.
+662:             </div>
+663:           </div>
+664:           <div>
+665:             <button class="primary-btn" style="padding: 10px 18px; font-size: 0.85rem;" onclick="demoOpenCounter(5, 'Maya K.')">
+666:               âš¡ Open Counter 5
+667:             </button>
+668:           </div>
+669:         </div>
+670: 
+671:         <div class="counters-grid">
+672:           
+673:           <div class="counter-box healthy">
+674:             <div style="display: flex; justify-content: space-between;">
+675:               <b>Counter 1 (Express &lt; 10 items)</b>
+676:               <span class="badge-status green">ACTIVE</span>
+677:             </div>
+678:             <div style="font-size: 0.78rem; color: var(--text-muted);">Cashier: <b>Arjun Verma</b></div>
+679:             <div style="display: flex; justify-content: space-between; font-size: 0.85rem;">
+680:               <span>Queue: <b>4 customers</b></span>
+681:               <span>Wait: <b style="color: var(--color-green);">2.1 min</b></span>
+682:             </div>
+683:           </div>
+684: 
+685:           <div class="counter-box congested" id="counterCard2">
+686:             <div style="display: flex; justify-content: space-between;">
+687:               <b>Counter 2 (Standard Lane)</b>
+688:               <span class="badge-status amber">CONGESTED</span>
+689:             </div>
+690:             <div style="font-size: 0.78rem; color: var(--text-muted);">Cashier: <b>Sneha Patil</b></div>
+691:             <div style="display: flex; justify-content: space-between; font-size: 0.85rem;">
+692:               <span>Queue: <b id="counter2QueueCount">6 customers</b></span>
+693:               <span>Wait: <b style="color: var(--color-amber);" id="counter2WaitTime">4.4 min</b></span>
+694:             </div>
+695:           </div>
+696: 
+697:           <div class="counter-box healthy">
+698:             <div style="display: flex; justify-content: space-between;">
+699:               <b>Counter 3 (Standard Lane)</b>
+700:               <span class="badge-status green">ACTIVE</span>
+701:             </div>
+702:             <div style="font-size: 0.78rem; color: var(--text-muted);">Cashier: <b>Rohan Nair</b></div>
+703:             <div style="display: flex; justify-content: space-between; font-size: 0.85rem;">
+704:               <span>Queue: <b>5 customers</b></span>
+705:               <span>Wait: <b>3.8 min</b></span>
+706:             </div>
+707:           </div>
+708: 
+709:           <div class="counter-box healthy">
+710:             <div style="display: flex; justify-content: space-between;">
+711:               <b>Counter 4 (Self-Checkout)</b>
+712:               <span class="badge-status green">ACTIVE</span>
+713:             </div>
+714:             <div style="font-size: 0.78rem; color: var(--text-muted);">AI Automated Lane</div>
+715:             <div style="display: flex; justify-content: space-between; font-size: 0.85rem;">
+716:               <span>Queue: <b>2 customers</b></span>
+717:               <span>Wait: <b style="color: var(--color-green);">1.2 min</b></span>
+718:             </div>
+719:           </div>
+720: 
+721:           <div class="counter-box standby" id="counterCard5">
+722:             <div style="display: flex; justify-content: space-between;">
+723:               <b>Counter 5 (Standby Overflow)</b>
+724:               <span class="badge-status amber" id="counter5Badge">STANDBY READY</span>
+725:             </div>
+726:             <div style="font-size: 0.78rem; color: var(--text-muted);" id="counter5Cashier">Assigned: <b>Maya K. (On Standby)</b></div>
+727:             <div style="display: flex; justify-content: space-between; font-size: 0.85rem;">
+728:               <span>Queue: <b id="counter5QueueCount">0</b></span>
+729:               <span>Status: <b style="color: var(--color-blue);" id="counter5ActionStatus">Recommended Open</b></span>
+730:             </div>
+731:           </div>
+732: 
+733:           <div class="counter-box" style="opacity: 0.6;">
+734:             <div style="display: flex; justify-content: space-between;">
+735:               <b>Counter 6 (Maintenance)</b>
+736:               <span class="badge-status" style="background: #e2e8f0; color: #64748b;">CLOSED</span>
+737:             </div>
+738:             <div style="font-size: 0.78rem; color: var(--text-muted);">Next Shift: 17:00 IST</div>
+739:             <div style="font-size: 0.85rem; color: var(--text-muted);">-</div>
+740:           </div>
+741: 
+742:         </div>
+743: 
+744:       </section>
+745: 
+746:       <!-- ===============================================================
+747:            TAB 5: QUALCOMM EDGE HARDWARE
+748:            =============================================================== -->
+749:       <section class="tab-pane" id="tab-architecture">
+750:         
+751:         <div class="card-panel" style="padding: 24px; margin-bottom: 24px;">
+752:           <h2 style="font-size: 1.3rem; margin-bottom: 8px;">Qualcomm Snapdragon / RB5 Edge AI Processing</h2>
+753:           <p style="color: var(--text-body); max-width: 840px; margin-bottom: 20px;">
+754:             PARALLAX executes computer vision models directly on store gateways powered by the <b>Qualcomm Hexagonâ„¢ NPU</b>. 
+755:             Raw customer CCTV video stays inside the storeâ€”only anonymized vector counts and stock levels are generated.
+756:           </p>
+757: 
+758:           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+759:             <div style="background: #f8fafc; border: 1px solid var(--border-color); padding: 14px; border-radius: 6px;">
+760:               <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Edge Latency</div>
+761:               <div class="bold-number" style="font-size: 1.5rem; color: var(--color-blue);">3.8 ms</div>
+762:             </div>
+763:             <div style="background: #f8fafc; border: 1px solid var(--border-color); padding: 14px; border-radius: 6px;">
+764:               <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Cloud Bandwidth Offload</div>
+765:               <div class="bold-number" style="font-size: 1.5rem; color: var(--color-green);">94.2%</div>
+766:             </div>
+767:             <div style="background: #f8fafc; border: 1px solid var(--border-color); padding: 14px; border-radius: 6px;">
+768:               <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Privacy Compliance</div>
+769:               <div class="bold-number" style="font-size: 1.5rem; color: var(--color-green);">100% DPDP</div>
+770:             </div>
+771:             <div style="background: #f8fafc; border: 1px solid var(--border-color); padding: 14px; border-radius: 6px;">
+772:               <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Offline Resiliency</div>
+773:               <div class="bold-number" style="font-size: 1.5rem; color: var(--text-main);">100% Active</div>
+774:             </div>
+775:           </div>
+776:         </div>
+777: 
+778:         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
+779:           
+780:           <div class="card-panel" style="padding: 18px;">
+781:             <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+782:               <b>Node Alpha (Qualcomm RB5)</b>
+783:               <span class="badge-status green">ONLINE</span>
+784:             </div>
+785:             <div style="font-size: 0.78rem; color: var(--text-muted); margin-bottom: 10px;">CAM 01-04 (Entrance & Bakery)</div>
+786:             <div style="font-size: 0.85rem;">NPU Load: <b>44%</b> &bull; FPS: <b>60.2</b> &bull; Latency: <b>3.6ms</b></div>
+787:           </div>
+788: 
+789:           <div class="card-panel" style="padding: 18px;">
+790:             <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+791:               <b>Node Beta (Qualcomm RB5)</b>
+792:               <span class="badge-status green">ONLINE</span>
+793:             </div>
+794:             <div style="font-size: 0.78rem; color: var(--text-muted); margin-bottom: 10px;">CAM 05-08 (Aisle 2 & 3 CPG)</div>
+795:             <div style="font-size: 0.85rem;">NPU Load: <b>58%</b> &bull; FPS: <b>59.8</b> &bull; Latency: <b>4.1ms</b></div>
+796:           </div>
+797: 
+798:           <div class="card-panel" style="padding: 18px;">
+799:             <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+800:               <b>Node Gamma (Snapdragon Edge)</b>
+The above content does NOT show the entire file contents. If you need to view any lines of the file which were not shown to complete your task, call this tool again to view those lines.
+

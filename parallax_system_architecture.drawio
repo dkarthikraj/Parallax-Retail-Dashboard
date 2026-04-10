@@ -1,0 +1,351 @@
+<mxfile host="app.diagrams.net" modified="2026-09-19T03:15:00.000Z" agent="Mozilla/5.0" version="21.6.8" type="device">
+  <diagram id="parallax-arch-sih2026" name="PARALLAX System Architecture">
+    <mxGraphModel dx="1800" dy="1100" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1180" background="#FFFFFF" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- ============================================================
+             DIAGRAM TITLE & BRANDING HEADER
+             ============================================================ -->
+        <mxCell id="hdr_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0F172A;strokeColor=#0284C7;strokeWidth=2;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="40" y="30" width="1840" height="90" as="geometry"/>
+        </mxCell>
+
+        <!-- Qualcomm Logo Image -->
+        <mxCell id="img_qualcomm" value="" style="shape=image;image=https://logos-world.net/wp-content/uploads/2022/11/Qualcomm-Logo.png;imageBorder=none;verticalLabelPosition=bottom;verticalAlign=top;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="70" y="45" width="160" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="hdr_title" value="PARALLAX: AI-Powered Retail Intelligence Platform" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=24;fontStyle=1;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="250" y="42" width="800" height="35" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="hdr_subtitle" value="Smart India Hackathon 2026 – Qualcomm Problem Statement | Edge-AI Decision Support Architecture (What &bull; Why &bull; Next Action)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=13;fontColor=#38BDF8;" vertex="1" parent="1">
+          <mxGeometry x="250" y="75" width="850" height="25" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="hdr_metrics" value="&lt;b&gt;On-Device Latency:&lt;/b&gt; 3.8ms | &lt;b&gt;NPU Frame Rate:&lt;/b&gt; 60 FPS | &lt;b&gt;Cloud Offload:&lt;/b&gt; 94.2% | &lt;b&gt;Privacy:&lt;/b&gt; 100% DPDP" style="text;html=1;strokeColor=#334155;fillColor=#1E293B;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontFamily=Helvetica;fontSize=11;fontColor=#10B981;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="1230" y="52" width="620" height="46" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================================
+             TIER 1: PHYSICAL STORE SENSORS & VISION INGESTION
+             ============================================================ -->
+        <mxCell id="tier1_lane" value="TIER 1: IN-STORE PHYSICAL SENSORS &amp; CAMERAS (EDGE VISION CAPTURE)" style="swimlane;startSize=32;rounded=1;arcSize=6;fillColor=#F8FAFC;strokeColor=#0284C7;strokeWidth=2;fontStyle=1;fontSize=13;fontFamily=Helvetica;fontColor=#0F172A;" vertex="1" parent="1">
+          <mxGeometry x="40" y="150" width="320" height="960" as="geometry"/>
+        </mxCell>
+
+        <!-- CCTV Cameras Node with Real Image -->
+        <mxCell id="t1_cctv_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;arcSize=8;" vertex="1" parent="tier1_lane">
+          <mxGeometry x="20" y="50" width="280" height="190" as="geometry"/>
+        </mxCell>
+        <mxCell id="img_cctv" value="" style="shape=image;image=https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=400&amp;auto=format&amp;fit=crop&amp;q=80;aspect=fixed;rounded=1;" vertex="1" parent="t1_cctv_box">
+          <mxGeometry x="15" y="15" width="70" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="txt_cctv_title" value="&lt;b&gt;16x RTSP HD IP Cameras&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=13;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="t1_cctv_box">
+          <mxGeometry x="95" y="15" width="170" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="txt_cctv_desc" value="&bull; CAM 01-04: Entrance &amp; Bakery&lt;br&gt;&bull; CAM 05-08: Aisles 2-3 (CPG &amp; Chilled)&lt;br&gt;&bull; CAM 09-12: Aisles 4-5 (Snacks &amp; Cereals)&lt;br&gt;&bull; CAM 13-16: POS Lanes 1-6 &amp; Exit" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;fontColor=#475569;" vertex="1" parent="t1_cctv_box">
+          <mxGeometry x="95" y="40" width="180" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="badge_cctv" value="1080p @ 30FPS H.264/RTSP" style="rounded=1;fillColor=#E0F2FE;strokeColor=#0284C7;text;fontSize=10;fontColor=#0369A1;fontStyle=1;align=center;" vertex="1" parent="t1_cctv_box">
+          <mxGeometry x="15" y="150" width="250" height="26" as="geometry"/>
+        </mxCell>
+
+        <!-- Retail Shelves Node with Real Image -->
+        <mxCell id="t1_shelf_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;arcSize=8;" vertex="1" parent="tier1_lane">
+          <mxGeometry x="20" y="270" width="280" height="200" as="geometry"/>
+        </mxCell>
+        <mxCell id="img_shelf" value="" style="shape=image;image=https://images.unsplash.com/photo-1578916171728-46686eac8d58?w=400&amp;auto=format&amp;fit=crop&amp;q=80;aspect=fixed;rounded=1;" vertex="1" parent="t1_shelf_box">
+          <mxGeometry x="15" y="15" width="70" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="txt_shelf_title" value="&lt;b&gt;Retail Shelves &amp; Planograms&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=13;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="t1_shelf_box">
+          <mxGeometry x="95" y="15" width="170" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="txt_shelf_desc" value="&bull; Physical facing alignment&lt;br&gt;&bull; Real-time shelf depletion&lt;br&gt;&bull; Critical: Shelf Stock = 0&lt;br&gt;&bull; Misplaced item tracking" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;fontColor=#475569;" vertex="1" parent="t1_shelf_box">
+          <mxGeometry x="95" y="40" width="180" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="badge_shelf" value="Optical Shelf Facing Segmentation" style="rounded=1;fillColor=#FEE2E2;strokeColor=#DC2626;text;fontSize=10;fontColor=#991B1B;fontStyle=1;align=center;" vertex="1" parent="t1_shelf_box">
+          <mxGeometry x="15" y="160" width="250" height="26" as="geometry"/>
+        </mxCell>
+
+        <!-- POS Checkout Counters Node with Real Image -->
+        <mxCell id="t1_pos_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;arcSize=8;" vertex="1" parent="tier1_lane">
+          <mxGeometry x="20" y="500" width="280" height="200" as="geometry"/>
+        </mxCell>
+        <mxCell id="img_pos" value="" style="shape=image;image=https://images.unsplash.com/photo-1556742049-0a67c5574f73?w=400&amp;auto=format&amp;fit=crop&amp;q=80;aspect=fixed;rounded=1;" vertex="1" parent="t1_pos_box">
+          <mxGeometry x="15" y="15" width="70" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="txt_pos_title" value="&lt;b&gt;POS Counters &amp; Queues&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=13;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="t1_pos_box">
+          <mxGeometry x="95" y="15" width="170" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="txt_pos_desc" value="&bull; Billing Counters 1-6&lt;br&gt;&bull; Cart capacity estimation&lt;br&gt;&bull; Wait times &amp; queue lengths&lt;br&gt;&bull; Cashier scanner telemetry" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;fontColor=#475569;" vertex="1" parent="t1_pos_box">
+          <mxGeometry x="95" y="40" width="180" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="badge_pos" value="Queue Tracking &amp; POS Telemetry" style="rounded=1;fillColor=#FEF3C7;strokeColor=#D97706;text;fontSize=10;fontColor=#92400E;fontStyle=1;align=center;" vertex="1" parent="t1_pos_box">
+          <mxGeometry x="15" y="160" width="250" height="26" as="geometry"/>
+        </mxCell>
+
+        <!-- Backroom Stock Inventory Bay -->
+        <mxCell id="t1_backroom_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;arcSize=8;" vertex="1" parent="tier1_lane">
+          <mxGeometry x="20" y="730" width="280" height="190" as="geometry"/>
+        </mxCell>
+        <mxCell id="txt_br_title" value="&lt;b&gt;Backroom Storage &amp; ERP Bins&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=13;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="t1_backroom_box">
+          <mxGeometry x="15" y="15" width="250" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="txt_br_desc" value="&bull; Storage Bay R-01 to R-12&lt;br&gt;&bull; Handheld RFID / Barcode guns&lt;br&gt;&bull; ERP recorded stock counts&lt;br&gt;&bull; Target: Backroom Stock &gt; 0" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;fontColor=#475569;" vertex="1" parent="t1_backroom_box">
+          <mxGeometry x="15" y="45" width="250" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="badge_br" value="Local Store Inventory Database" style="rounded=1;fillColor=#DCFCE7;strokeColor=#10B981;text;fontSize=10;fontColor=#166534;fontStyle=1;align=center;" vertex="1" parent="t1_backroom_box">
+          <mxGeometry x="15" y="150" width="250" height="26" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================================
+             TIER 2: QUALCOMM ON-PREMISE EDGE AI GATEWAY (HEXAGON NPU)
+             ============================================================ -->
+        <mxCell id="tier2_lane" value="TIER 2: QUALCOMM ON-PREMISE EDGE AI GATEWAYS (HEXAGON™ NPU)" style="swimlane;startSize=32;rounded=1;arcSize=6;fillColor=#F8FAFC;strokeColor=#0284C7;strokeWidth=2;fontStyle=1;fontSize=13;fontFamily=Helvetica;fontColor=#0F172A;" vertex="1" parent="1">
+          <mxGeometry x="400" y="150" width="370" height="960" as="geometry"/>
+        </mxCell>
+
+        <!-- Real Edge Server / Hardware Node Image Box -->
+        <mxCell id="t2_hw_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0F172A;strokeColor=#0284C7;strokeWidth=2;arcSize=8;" vertex="1" parent="tier2_lane">
+          <mxGeometry x="20" y="50" width="330" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="img_server" value="" style="shape=image;image=https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&amp;auto=format&amp;fit=crop&amp;q=80;aspect=fixed;rounded=1;" vertex="1" parent="t2_hw_box">
+          <mxGeometry x="15" y="15" width="80" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="txt_hw_title" value="&lt;b&gt;Qualcomm RB5 / Snapdragon Gateways&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=12;fontStyle=1;fontColor=#FFFFFF;" vertex="1" parent="t2_hw_box">
+          <mxGeometry x="105" y="15" width="215" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="txt_hw_desc" value="&bull; 4x On-Premise Gateways&lt;br&gt;&bull; Hexagon™ Tensor Accelerator (HTA)&lt;br&gt;&bull; Hardware H.264/H.265 Decoders&lt;br&gt;&bull; 15W Ultra-Low Power Envelope" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=10;fontColor=#94A3B8;" vertex="1" parent="t2_hw_box">
+          <mxGeometry x="105" y="40" width="215" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="badge_hw" value="Qualcomm Neural Processing SDK (SNPE Int8)" style="rounded=1;fillColor=#0284C7;strokeColor=#38BDF8;text;fontSize=10;fontColor=#FFFFFF;fontStyle=1;align=center;" vertex="1" parent="t2_hw_box">
+          <mxGeometry x="15" y="110" width="300" height="26" as="geometry"/>
+        </mxCell>
+
+        <!-- On-Device Quantized AI Model Suite -->
+        <mxCell id="t2_models_box" value="&lt;b&gt;QUALCOMM HEXAGON™ INT8 AI MODEL SUITE&lt;/b&gt;" style="swimlane;startSize=26;rounded=1;arcSize=6;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;fontSize=11;fontColor=#0F172A;" vertex="1" parent="tier2_lane">
+          <mxGeometry x="20" y="220" width="330" height="430" as="geometry"/>
+        </mxCell>
+
+        <!-- Model 1: YOLO-v11n -->
+        <mxCell id="m_yolo" value="&lt;b&gt;YOLO-v11n (Int8 Quantized)&lt;/b&gt;&lt;br&gt;Pedestrian &amp; Cart Detection | &lt;b&gt;1.8 ms Latency&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#64748b&quot;&gt;Detects shopper bounding boxes, baskets, carts&lt;/font&gt;" style="rounded=1;fillColor=#F0F9FF;strokeColor=#0284C7;strokeWidth=1;html=1;align=left;spacingLeft=10;fontSize=11;fontColor=#0F172A;" vertex="1" parent="t2_models_box">
+          <mxGeometry x="15" y="40" width="300" height="65" as="geometry"/>
+        </mxCell>
+
+        <!-- Model 2: ByteTrack-Edge -->
+        <mxCell id="m_bytetrack" value="&lt;b&gt;ByteTrack-Edge Multi-Object Tracker&lt;/b&gt;&lt;br&gt;Trajectory &amp; Dwell Accumulation | &lt;b&gt;0.6 ms Latency&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#64748b&quot;&gt;Assigns ID, measures dwell seconds per aisle&lt;/font&gt;" style="rounded=1;fillColor=#F0FDF4;strokeColor=#10B981;strokeWidth=1;html=1;align=left;spacingLeft=10;fontSize=11;fontColor=#0F172A;" vertex="1" parent="t2_models_box">
+          <mxGeometry x="15" y="120" width="300" height="65" as="geometry"/>
+        </mxCell>
+
+        <!-- Model 3: ShelfSeg-MobileNetV4 -->
+        <mxCell id="m_shelfseg" value="&lt;b&gt;ShelfSeg-MobileNetV4 (Facing Counter)&lt;/b&gt;&lt;br&gt;Empty Facing &amp; Gap Detection | &lt;b&gt;1.2 ms Latency&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#64748b&quot;&gt;Detects Shelf=0 gap &amp; misplaced items&lt;/font&gt;" style="rounded=1;fillColor=#FEF2F2;strokeColor=#DC2626;strokeWidth=1;html=1;align=left;spacingLeft=10;fontSize=11;fontColor=#0F172A;" vertex="1" parent="t2_models_box">
+          <mxGeometry x="15" y="200" width="300" height="65" as="geometry"/>
+        </mxCell>
+
+        <!-- Model 4: QueueHead-Transformer -->
+        <mxCell id="m_queue" value="&lt;b&gt;QueueHead-Transformer (Delay Forecaster)&lt;/b&gt;&lt;br&gt;Cart Bulk &amp; Wait Time Predictor | &lt;b&gt;0.8 ms Latency&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#64748b&quot;&gt;Predicts lane bottleneck 4 minutes in advance&lt;/font&gt;" style="rounded=1;fillColor=#FFFBEB;strokeColor=#D97706;strokeWidth=1;html=1;align=left;spacingLeft=10;fontSize=11;fontColor=#0F172A;" vertex="1" parent="t2_models_box">
+          <mxGeometry x="15" y="280" width="300" height="65" as="geometry"/>
+        </mxCell>
+
+        <!-- Total Inference Speed -->
+        <mxCell id="m_speed" value="&lt;b&gt;Total Pipeline: 4.4 ms | Sustained 60.2 FPS&lt;/b&gt;" style="rounded=1;fillColor=#0F172A;strokeColor=#0284C7;text;fontSize=11;fontColor=#38BDF8;fontStyle=1;align=center;" vertex="1" parent="t2_models_box">
+          <mxGeometry x="15" y="365" width="300" height="35" as="geometry"/>
+        </mxCell>
+
+        <!-- Privacy Shield Engine (100% DPDP) -->
+        <mxCell id="t2_privacy_box" value="&lt;b&gt;LOCAL PRIVACY &amp; ANONYMIZATION SHIELD&lt;/b&gt;&lt;br&gt;&bull; On-device facial blurring &amp; feature hashing&lt;br&gt;&bull; &lt;b&gt;Zero raw CCTV video leaves local RAM&lt;/b&gt;&lt;br&gt;&bull; Raw frames discarded after tensor extraction&lt;br&gt;&bull; Outputs: JSON vectors, counts &amp; bounding boxes only&lt;br&gt;&bull; &lt;b&gt;100% DPDP Act &amp; GDPR Compliant&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DCFCE7;strokeColor=#10B981;strokeWidth=2;align=left;spacingLeft=12;fontSize=11;fontColor=#0F172A;" vertex="1" parent="tier2_lane">
+          <mxGeometry x="20" y="670" width="330" height="130" as="geometry"/>
+        </mxCell>
+
+        <!-- Local Vector Broker (MQTT) -->
+        <mxCell id="t2_broker_box" value="&lt;b&gt;Low-Latency Local Edge Broker (MQTT / IPC)&lt;/b&gt;&lt;br&gt;Publish/Subscribe Bus &bull; 2.4 MB/hr JSON Payload" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0284C7;strokeColor=#0369A1;fontColor=#FFFFFF;align=center;fontSize=11;fontStyle=1;" vertex="1" parent="tier2_lane">
+          <mxGeometry x="20" y="820" width="330" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================================
+             TIER 3: PARALLAX CORE DECISION & CORRELATION ENGINE
+             ============================================================ -->
+        <mxCell id="tier3_lane" value="TIER 3: PARALLAX DECISION ENGINE (WHAT &bull; WHY &bull; NEXT ACTION)" style="swimlane;startSize=32;rounded=1;arcSize=6;fillColor=#F8FAFC;strokeColor=#0284C7;strokeWidth=2;fontStyle=1;fontSize=13;fontFamily=Helvetica;fontColor=#0F172A;" vertex="1" parent="1">
+          <mxGeometry x="810" y="150" width="370" height="960" as="geometry"/>
+        </mxCell>
+
+        <!-- Engine 1: Shopper Intelligence -->
+        <mxCell id="t3_shopper" value="&lt;b&gt;1. SHOPPER INTELLIGENCE ENGINE&lt;/b&gt;" style="swimlane;startSize=26;rounded=1;arcSize=6;fillColor=#FFFFFF;strokeColor=#0284C7;strokeWidth=1;fontSize=11;fontColor=#0284C7;" vertex="1" parent="tier3_lane">
+          <mxGeometry x="20" y="50" width="330" height="190" as="geometry"/>
+        </mxCell>
+        <mxCell id="t3_s_content" value="&bull; &lt;b&gt;Real-Time Dwell Heatmap:&lt;/b&gt; Aisle 3 (5.4m), Aisle 4 (1.5m)&lt;br&gt;&bull; &lt;b&gt;Footfall Tracking:&lt;/b&gt; 184 shoppers/hr baseline&lt;br&gt;&bull; &lt;b&gt;Journey Funnel:&lt;/b&gt; Entry &rarr; Explore &rarr; Pick &rarr; POS&lt;br&gt;&bull; &lt;b&gt;Cold Zone Diagnostics:&lt;/b&gt; Identifies low-traffic bays&lt;br&gt;&bull; &lt;b&gt;Outputs:&lt;/b&gt; Heat density matrices, zone dwell alerts" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;fontColor=#334155;" vertex="1" parent="t3_shopper">
+          <mxGeometry x="10" y="35" width="310" height="140" as="geometry"/>
+        </mxCell>
+
+        <!-- Engine 2: Inventory Intelligence (Core Anomaly Detection) -->
+        <mxCell id="t3_inventory" value="&lt;b&gt;2. INVENTORY INTELLIGENCE ENGINE (ANOMALY DETECTOR)&lt;/b&gt;" style="swimlane;startSize=26;rounded=1;arcSize=6;fillColor=#FFFFFF;strokeColor=#DC2626;strokeWidth=2;fontSize=11;fontColor=#DC2626;" vertex="1" parent="tier3_lane">
+          <mxGeometry x="20" y="260" width="330" height="230" as="geometry"/>
+        </mxCell>
+        <mxCell id="t3_i_anomaly_box" value="&lt;b&gt;CRITICAL RETAIL ANOMALY DETECTOR&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#DC2626&quot;&gt;&lt;b&gt;Shelf Stock = 0  &amp;amp;&amp;amp;  Backroom Stock &gt; 0&lt;/b&gt;&lt;/font&gt;&lt;br&gt;Correlates shelf camera gap with ERP stock." style="rounded=1;fillColor=#FEE2E2;strokeColor=#DC2626;strokeWidth=1;html=1;align=center;fontSize=11;fontColor=#991B1B;" vertex="1" parent="t3_inventory">
+          <mxGeometry x="15" y="35" width="300" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="t3_i_content" value="&bull; &lt;b&gt;Depletion Rate Estimator:&lt;/b&gt; SKU grab velocity per min&lt;br&gt;&bull; &lt;b&gt;Misplacement Tracker:&lt;/b&gt; Olive Oil in Cereal Bay flagged&lt;br&gt;&bull; &lt;b&gt;Revenue Leakage Calculator:&lt;/b&gt; ₹5,190/hr active risk&lt;br&gt;&bull; &lt;b&gt;Restock Dispatch Trigger:&lt;/b&gt; Bay R-04, 24 units" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;fontColor=#334155;" vertex="1" parent="t3_inventory">
+          <mxGeometry x="15" y="105" width="300" height="110" as="geometry"/>
+        </mxCell>
+
+        <!-- Engine 3: Queue Intelligence -->
+        <mxCell id="t3_queue" value="&lt;b&gt;3. QUEUE &amp; CHECKOUT INTELLIGENCE ENGINE&lt;/b&gt;" style="swimlane;startSize=26;rounded=1;arcSize=6;fillColor=#FFFFFF;strokeColor=#D97706;strokeWidth=1;fontSize=11;fontColor=#D97706;" vertex="1" parent="tier3_lane">
+          <mxGeometry x="20" y="510" width="330" height="190" as="geometry"/>
+        </mxCell>
+        <mxCell id="t3_q_content" value="&bull; &lt;b&gt;Predictive Bottleneck Forecaster:&lt;/b&gt; 7 bulk carts incoming&lt;br&gt;&bull; &lt;b&gt;Lane Wait Threshold:&lt;/b&gt; Counter 2 spike (4.4 min &gt; 3.0 min)&lt;br&gt;&bull; &lt;b&gt;Dynamic Staff Allocator:&lt;/b&gt; Recommends Counter 5 Open&lt;br&gt;&bull; &lt;b&gt;Throughput Optimization:&lt;/b&gt; Rebalances lines to 1.8 min" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;fontColor=#334155;" vertex="1" parent="t3_queue">
+          <mxGeometry x="10" y="35" width="310" height="140" as="geometry"/>
+        </mxCell>
+
+        <!-- Root Cause & Next Action Decision Synthesizer -->
+        <mxCell id="t3_synthesizer" value="&lt;b&gt;ROOT CAUSE &amp;amp; ACTION SYNTHESIZER (WHAT &bull; WHY &bull; ACTION)&lt;/b&gt;&lt;br&gt;Converts raw multi-stream anomalies into prescriptive tickets&lt;br&gt;&lt;b&gt;What happened? &bull; Why did it happen? &bull; What to do next?&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0F172A;strokeColor=#0284C7;strokeWidth=2;fontColor=#FFFFFF;align=center;fontSize=11;fontStyle=0;" vertex="1" parent="tier3_lane">
+          <mxGeometry x="20" y="720" width="330" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- Local Telemetry State Store -->
+        <mxCell id="t3_db" value="&lt;b&gt;Local SQLite / Redis In-Memory State Store&lt;/b&gt;&lt;br&gt;Active carts, aisle dwell counters, restock task states" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=10;fillColor=#F1F5F9;strokeColor=#94A3B8;fontColor=#0F172A;align=center;fontSize=11;" vertex="1" parent="tier3_lane">
+          <mxGeometry x="20" y="820" width="330" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================================
+             TIER 4: PROACTIVE ACTION & PRESENTATION TIER
+             ============================================================ -->
+        <mxCell id="tier4_lane" value="TIER 4: PROACTIVE STORE ACTIONS &amp; USER DASHBOARD" style="swimlane;startSize=32;rounded=1;arcSize=6;fillColor=#F8FAFC;strokeColor=#0284C7;strokeWidth=2;fontStyle=1;fontSize=13;fontFamily=Helvetica;fontColor=#0F172A;" vertex="1" parent="1">
+          <mxGeometry x="1220" y="150" width="330" height="960" as="geometry"/>
+        </mxCell>
+
+        <!-- Store Associate Mobile Device with Real Image -->
+        <mxCell id="t4_mobile_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;arcSize=8;" vertex="1" parent="tier4_lane">
+          <mxGeometry x="20" y="50" width="290" height="190" as="geometry"/>
+        </mxCell>
+        <mxCell id="img_mobile" value="" style="shape=image;image=https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&amp;auto=format&amp;fit=crop&amp;q=80;aspect=fixed;rounded=1;" vertex="1" parent="t4_mobile_box">
+          <mxGeometry x="15" y="15" width="70" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="txt_mobile_title" value="&lt;b&gt;Associate Handset App&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=13;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="t4_mobile_box">
+          <mxGeometry x="95" y="15" width="180" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="txt_mobile_desc" value="&bull; Task: Restock Red Bull 24 cans&lt;br&gt;&bull; Location: Backroom Bay R-04&lt;br&gt;&bull; Assigned to: Rahul Sen&lt;br&gt;&bull; Runner item retrieval ticket" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;fontColor=#475569;" vertex="1" parent="t4_mobile_box">
+          <mxGeometry x="95" y="40" width="180" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="badge_mobile" value="One-Click Task Acknowledge &amp; Complete" style="rounded=1;fillColor=#DCFCE7;strokeColor=#10B981;text;fontSize=10;fontColor=#166534;fontStyle=1;align=center;" vertex="1" parent="t4_mobile_box">
+          <mxGeometry x="15" y="150" width="260" height="26" as="geometry"/>
+        </mxCell>
+
+        <!-- Cashier Terminal Alert -->
+        <mxCell id="t4_cashier_box" value="&lt;b&gt;Cashier Terminal POS Alert&lt;/b&gt;&lt;br&gt;&bull; Prompt: Open Counter 5 (Standby)&lt;br&gt;&bull; Assigned Cashier: Maya K.&lt;br&gt;&bull; Automatic lane opening &amp; queue rebalancing&lt;br&gt;&bull; Prevents customer wait spike" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFBEB;strokeColor=#D97706;strokeWidth=1;align=left;spacingLeft=12;fontSize=11;fontColor=#0F172A;" vertex="1" parent="tier4_lane">
+          <mxGeometry x="20" y="260" width="290" height="110" as="geometry"/>
+        </mxCell>
+
+        <!-- Dynamic Digital Signage -->
+        <mxCell id="t4_signage_box" value="&lt;b&gt;Dynamic Store Endcap Signage&lt;/b&gt;&lt;br&gt;&bull; Pushes promotional bundles to Cold Zones&lt;br&gt;&bull; Trigger: Aisle 4 dwell &lt; 2.0 min&lt;br&gt;&bull; Promo: Muesli + Almond Milk 20% off" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F0F9FF;strokeColor=#0284C7;strokeWidth=1;align=left;spacingLeft=12;fontSize=11;fontColor=#0F172A;" vertex="1" parent="tier4_lane">
+          <mxGeometry x="20" y="390" width="290" height="95" as="geometry"/>
+        </mxCell>
+
+        <!-- PARALLAX Web Dashboard (Built App) -->
+        <mxCell id="t4_dashboard_box" value="&lt;b&gt;PARALLAX Web Command Dashboard&lt;/b&gt;&lt;br&gt;&bull; Live Vision AI Feed (CAM-08 with Real Video)&lt;br&gt;&bull; Real-Time Thermal Heatmap Video Feed&lt;br&gt;&bull; Action Required Feed (What/Why/Action)&lt;br&gt;&bull; Critical Out-of-Stock Matrix (Shelf=0, BR&gt;0)&lt;br&gt;&bull; Qualcomm Hexagon NPU Telemetry" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0F172A;strokeColor=#0284C7;strokeWidth=2;align=left;spacingLeft=12;fontSize=11;fontColor=#FFFFFF;" vertex="1" parent="tier4_lane">
+          <mxGeometry x="20" y="505" width="290" height="160" as="geometry"/>
+        </mxCell>
+
+        <!-- Fast Local WebSocket Gateway -->
+        <mxCell id="t4_ws" value="&lt;b&gt;Real-Time Local WebSocket Server (60 FPS)&lt;/b&gt;&lt;br&gt;Sub-10ms UI push to tablet, POS &amp; dashboard" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0284C7;strokeColor=#0369A1;fontColor=#FFFFFF;align=center;fontSize=11;fontStyle=1;" vertex="1" parent="tier4_lane">
+          <mxGeometry x="20" y="690" width="290" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================================
+             TIER 5: ENTERPRISE CLOUD & CORPORATE ERP SYNC
+             ============================================================ -->
+        <mxCell id="tier5_lane" value="TIER 5: ENTERPRISE CLOUD &amp; ERP SYNC (AGGREGATE DATA ONLY)" style="swimlane;startSize=32;rounded=1;arcSize=6;fillColor=#F8FAFC;strokeColor=#0284C7;strokeWidth=2;fontStyle=1;fontSize=13;fontFamily=Helvetica;fontColor=#0F172A;" vertex="1" parent="1">
+          <mxGeometry x="1590" y="150" width="290" height="960" as="geometry"/>
+        </mxCell>
+
+        <!-- Cloud Gateway -->
+        <mxCell id="t5_cloud_gw" value="&lt;b&gt;Secure TLS 1.3 Outbound Gateway&lt;/b&gt;&lt;br&gt;&bull; Zero inbound open ports&lt;br&gt;&bull; Metadata only: 2.4 MB/hr payload&lt;br&gt;&bull; &lt;b&gt;94.2% Bandwidth Reduction&lt;/b&gt;&lt;br&gt;&bull; Zero customer video leaves store" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;align=left;spacingLeft=12;fontSize=11;fontColor=#0F172A;" vertex="1" parent="tier5_lane">
+          <mxGeometry x="20" y="50" width="250" height="120" as="geometry"/>
+        </mxCell>
+
+        <!-- Enterprise ERP Systems -->
+        <mxCell id="t5_erp" value="&lt;b&gt;Enterprise Retail ERP Systems&lt;/b&gt;&lt;br&gt;&bull; SAP Retail / S4 HANA&lt;br&gt;&bull; Oracle Retail Merchandising&lt;br&gt;&bull; Blue Yonder Inventory Engine&lt;br&gt;&bull; Automated Purchase Re-orders" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F0FDF4;strokeColor=#10B981;strokeWidth=1;align=left;spacingLeft=12;fontSize=11;fontColor=#0F172A;" vertex="1" parent="tier5_lane">
+          <mxGeometry x="20" y="200" width="250" height="130" as="geometry"/>
+        </mxCell>
+
+        <!-- Corporate Executive Dashboard -->
+        <mxCell id="t5_corp_dash" value="&lt;b&gt;Corporate Headquarters Multi-Store Analytics&lt;/b&gt;&lt;br&gt;&bull; Chain-wide footfall benchmarks&lt;br&gt;&bull; Store-to-store stock-out leakage&lt;br&gt;&bull; Merchandising A/B test results&lt;br&gt;&bull; Labor cost vs throughput efficiency" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;align=left;spacingLeft=12;fontSize=11;fontColor=#0F172A;" vertex="1" parent="tier5_lane">
+          <mxGeometry x="20" y="360" width="250" height="150" as="geometry"/>
+        </mxCell>
+
+        <!-- Cost & Privacy Summary Box -->
+        <mxCell id="t5_savings" value="&lt;b&gt;QUALCOMM EDGE ADVANTAGE&lt;/b&gt;&lt;br&gt;&bull; &lt;b&gt;Cloud Cost Avoidance:&lt;/b&gt; $3,840/mo per store&lt;br&gt;&bull; &lt;b&gt;Bandwidth Saved:&lt;/b&gt; 482 GB/day&lt;br&gt;&bull; &lt;b&gt;Offline Autonomous:&lt;/b&gt; 100% operation during Internet outages" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0F172A;strokeColor=#10B981;strokeWidth=2;fontColor=#FFFFFF;align=left;spacingLeft=12;fontSize=11;fontStyle=0;" vertex="1" parent="tier5_lane">
+          <mxGeometry x="20" y="540" width="250" height="140" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================================
+             INTER-TIER CONNECTORS & DATA FLOWS
+             ============================================================ -->
+        <!-- RTSP video from Tier 1 to Tier 2 -->
+        <mxCell id="flow_rtsp" value="RTSP Camera Feeds (16 Streams)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#0284C7;strokeWidth=2;fontColor=#0284C7;fontStyle=1;fontSize=10;" edge="1" parent="1" source="t1_cctv_box" target="t2_hw_box">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Shelves to Edge AI -->
+        <mxCell id="flow_shelf" value="Shelf Images" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#DC2626;strokeWidth=2;fontColor=#DC2626;fontStyle=1;fontSize=10;" edge="1" parent="1" source="t1_shelf_box" target="m_shelfseg">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- POS to Edge Queue -->
+        <mxCell id="flow_pos" value="Queue Frames" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#D97706;strokeWidth=2;fontColor=#D97706;fontStyle=1;fontSize=10;" edge="1" parent="1" source="t1_pos_box" target="m_queue">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Backroom ERP stock to Tier 3 Anomaly Engine -->
+        <mxCell id="flow_br" value="Backroom Stock Counts (Bay R-04: 48)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#10B981;strokeWidth=2;fontColor=#166534;fontStyle=1;fontSize=10;" edge="1" parent="1" source="t1_backroom_box" target="t3_inventory">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="380" y="970"/>
+              <mxPoint x="995" y="970"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Tier 2 Models to Tier 2 Broker -->
+        <mxCell id="flow_tensors" value="Quantized Int8 Detections &amp; Tracking Vectors" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0284C7;strokeWidth=2;fontColor=#0284C7;fontSize=10;" edge="1" parent="tier2_lane" source="t2_models_box" target="t2_broker_box">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Tier 2 Broker to Tier 3 Decision Engines -->
+        <mxCell id="flow_broker_to_engines" value="Filtered Metadata Stream (MQTT)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0284C7;strokeWidth=2;fontColor=#0284C7;fontStyle=1;fontSize=10;" edge="1" parent="1" source="t2_broker_box" target="t3_synthesizer">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Tier 3 Synthesizer to Tier 4 WebSocket -->
+        <mxCell id="flow_actions" value="Prescriptive Tasks (What, Why, Action)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#10B981;strokeWidth=3;fontColor=#166534;fontStyle=1;fontSize=11;" edge="1" parent="1" source="t3_synthesizer" target="t4_ws">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- WebSocket to Handset, Alert, Dashboard -->
+        <mxCell id="flow_ws_mobile" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#10B981;strokeWidth=2;" edge="1" parent="tier4_lane" source="t4_ws" target="t4_mobile_box">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="320" y="715"/>
+              <mxPoint x="320" y="145"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_ws_dash" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0284C7;strokeWidth=2;" edge="1" parent="tier4_lane" source="t4_ws" target="t4_dashboard_box">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Tier 4 to Tier 5 Cloud Sync -->
+        <mxCell id="flow_cloud" value="Aggregated Telemetry (TLS 1.3)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=2;fontColor=#475569;fontSize=10;" edge="1" parent="1" source="t4_dashboard_box" target="t5_cloud_gw">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="flow_erp_sync" value="ERP Inventory Sync" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#10B981;strokeWidth=2;fontColor=#166534;fontSize=10;" edge="1" parent="tier5_lane" source="t5_cloud_gw" target="t5_erp">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

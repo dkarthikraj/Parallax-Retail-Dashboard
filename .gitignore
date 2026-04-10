@@ -1,0 +1,23 @@
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Dependencies
+/node_modules
+/.pnp
+.pnp.*
+
+# Next.js build outputs
+/.next/
+/out/
+
+# Temp files
+*.tmp
+*.log
+.vscode/
+.idea/

@@ -1,0 +1,367 @@
+/* ===================================================================
+   PARALLAX — Old 2000s Monotone Web Theme
+   =================================================================== */
+
+:root {
+  --bg-page: #c0c0c0;
+  --bg-card: #c0c0c0;
+  --bg-card-soft: #d4d0c8;
+  --bg-sidebar: #c0c0c0;
+  --bg-inset: #ffffff;
+
+  --border-light: #ffffff;
+  --border-dark: #808080;
+  --border-darker: #404040;
+  
+  --text-main: #000000;
+  --text-muted: #404040;
+
+  --font-heading: Tahoma, "MS Sans Serif", Arial, sans-serif;
+  --font-text: Tahoma, "MS Sans Serif", Arial, sans-serif;
+  --font-mono: "Courier New", Courier, monospace;
+
+  --radius: 0px;
+  --sidebar-w: 200px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: auto; }
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  font-family: var(--font-text);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+b, strong { font-weight: bold; }
+
+/* Classic Windows 95/2000 Outset Border */
+.win-border {
+  border-top: 2px solid var(--border-light);
+  border-left: 2px solid var(--border-light);
+  border-right: 2px solid var(--border-dark);
+  border-bottom: 2px solid var(--border-dark);
+}
+
+/* Classic Windows Inset Border */
+.win-inset {
+  border-top: 2px solid var(--border-dark);
+  border-left: 2px solid var(--border-dark);
+  border-right: 2px solid var(--border-light);
+  border-bottom: 2px solid var(--border-light);
+  background-color: var(--bg-inset);
+}
+
+/* ===================================================================
+   APP GRID
+   =================================================================== */
+.app-container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: var(--sidebar-w) 1fr;
+  grid-template-rows: 40px 1fr;
+  grid-template-areas:
+    "header header"
+    "sidebar main";
+}
+
+/* ===================================================================
+   HEADER
+   =================================================================== */
+.top-header {
+  grid-area: header;
+  background: #000080; /* Classic Win95 Title Bar Blue */
+  color: #ffffff;
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.brand-section { display: flex; align-items: center; }
+
+.brand-title-group h1 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+}
+.brand-subtitle { display: none; }
+.qc-tag { display: none; }
+
+.telemetry-strip { display: flex; gap: 15px; font-size: 12px; }
+.telemetry-node { display: flex; gap: 5px; color: #c0c0c0; }
+.telemetry-node strong { color: #ffffff !important; font-weight: bold; }
+.pulse-indicator { display: none; }
+
+.store-badge { font-size: 12px; color: #ffffff; }
+
+/* ===================================================================
+   SIDEBAR
+   =================================================================== */
+.nav-tab-strip {
+  grid-area: sidebar;
+  background: var(--bg-sidebar);
+  border-right: 2px solid var(--border-light);
+  padding: 10px 5px;
+}
+
+.nav-tabs-inner { display: flex; flex-direction: column; gap: 2px; }
+
+.nav-tab-btn {
+  background: var(--bg-card);
+  border-top: 2px solid var(--border-light);
+  border-left: 2px solid var(--border-light);
+  border-right: 2px solid var(--border-dark);
+  border-bottom: 2px solid var(--border-dark);
+  padding: 6px 8px;
+  color: var(--text-main);
+  font-family: var(--font-text);
+  font-size: 12px;
+  cursor: pointer;
+  text-align: left;
+}
+.nav-tab-btn:active {
+  border-top: 2px solid var(--border-dark);
+  border-left: 2px solid var(--border-dark);
+  border-right: 2px solid var(--border-light);
+  border-bottom: 2px solid var(--border-light);
+  padding: 7px 7px 5px 9px;
+}
+.nav-tab-btn.active {
+  background: #ffffff;
+  border: 2px solid #000000;
+  font-weight: bold;
+}
+
+.badge-alert {
+  color: #ff0000;
+  font-weight: bold;
+  font-size: 10px;
+  margin-left: auto;
+}
+
+/* ===================================================================
+   MAIN
+   =================================================================== */
+.main-content {
+  grid-area: main;
+  padding: 10px;
+}
+.tab-pane { display: none; }
+.tab-pane.active { display: block; }
+
+/* ===================================================================
+   KPI CARDS
+   =================================================================== */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.kpi-card {
+  background: var(--bg-card);
+  border-top: 2px solid var(--border-light);
+  border-left: 2px solid var(--border-light);
+  border-right: 2px solid var(--border-dark);
+  border-bottom: 2px solid var(--border-dark);
+  padding: 10px;
+}
+.kpi-label { font-size: 11px; font-weight: bold; margin-bottom: 4px; }
+.kpi-value { font-size: 18px; font-weight: bold; color: #000080; }
+.kpi-subtext { font-size: 11px; color: var(--text-muted); margin-top: 4px; }
+
+/* ===================================================================
+   PANELS
+   =================================================================== */
+.overview-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.card-panel {
+  background: var(--bg-card);
+  border-top: 2px solid var(--border-light);
+  border-left: 2px solid var(--border-light);
+  border-right: 2px solid var(--border-dark);
+  border-bottom: 2px solid var(--border-dark);
+  margin-bottom: 10px;
+}
+.card-panel-header {
+  padding: 4px 8px;
+  background: #000080;
+  color: #ffffff;
+  border-bottom: 1px solid var(--border-dark);
+}
+.card-panel-header h2 { font-size: 12px; font-weight: bold; color: #ffffff; margin: 0; }
+.card-panel-header .qc-tag { display: none; }
+.card-panel-header div { color: #c0c0c0 !important; font-size: 11px !important; }
+
+/* ===================================================================
+   VIDEO
+   =================================================================== */
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background: #000;
+  border-top: 2px solid var(--border-dark);
+  border-left: 2px solid var(--border-dark);
+  border-right: 2px solid var(--border-light);
+  border-bottom: 2px solid var(--border-light);
+}
+.camera-real-video { width: 100%; height: 100%; object-fit: contain; display: block; background: #fff; }
+.canvas-overlay { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+
+.video-hud-header, .video-hud-footer { display: none; }
+
+.video-controls {
+  padding: 8px;
+  background: var(--bg-card);
+  font-size: 11px;
+}
+.video-controls label { font-weight: normal; }
+
+.cam-tabs { display: flex; gap: 4px; margin-bottom: 4px; }
+.cam-btn {
+  background: var(--bg-card);
+  border-top: 2px solid var(--border-light);
+  border-left: 2px solid var(--border-light);
+  border-right: 2px solid var(--border-dark);
+  border-bottom: 2px solid var(--border-dark);
+  padding: 2px 6px;
+  font-size: 11px;
+  cursor: pointer;
+}
+.cam-btn:active {
+  border-top: 2px solid var(--border-dark);
+  border-left: 2px solid var(--border-dark);
+  border-right: 2px solid var(--border-light);
+  border-bottom: 2px solid var(--border-light);
+}
+.cam-btn.active {
+  background: #ffffff;
+  border: 1px solid #000000;
+  font-weight: bold;
+}
+
+/* ===================================================================
+   ACTION CARDS
+   =================================================================== */
+.action-items-list { padding: 10px; display: flex; flex-direction: column; gap: 10px; }
+
+.action-card {
+  background: var(--bg-card);
+  border-top: 2px solid var(--border-light);
+  border-left: 2px solid var(--border-light);
+  border-right: 2px solid var(--border-dark);
+  border-bottom: 2px solid var(--border-dark);
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.action-card-title { font-size: 12px; font-weight: bold; color: #000080; text-decoration: underline; cursor: pointer; }
+.action-card-top span { color: #000 !important; font-weight: normal !important; background: none !important; }
+
+.triad-box {
+  background: #ffffff;
+  border-top: 2px solid var(--border-dark);
+  border-left: 2px solid var(--border-dark);
+  border-right: 2px solid var(--border-light);
+  border-bottom: 2px solid var(--border-light);
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 11px;
+}
+.triad-row { display: flex; gap: 4px; }
+.triad-tag { font-weight: bold; color: #000; }
+
+.primary-btn, .dismiss-btn {
+  background: var(--bg-card);
+  border-top: 2px solid var(--border-light);
+  border-left: 2px solid var(--border-light);
+  border-right: 2px solid var(--border-dark);
+  border-bottom: 2px solid var(--border-dark);
+  color: #000;
+  font-family: Tahoma, sans-serif;
+  font-size: 11px;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+.primary-btn:active, .dismiss-btn:active {
+  border-top: 2px solid var(--border-dark);
+  border-left: 2px solid var(--border-dark);
+  border-right: 2px solid var(--border-light);
+  border-bottom: 2px solid var(--border-light);
+  padding: 5px 9px 3px 11px;
+}
+
+/* ===================================================================
+   CALLOUT + TABLE
+   =================================================================== */
+.anomaly-callout {
+  background: #ffffcc;
+  border: 1px solid #000;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.simple-table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid #000; font-size: 11px; }
+.simple-table th { background: #c0c0c0; border: 1px solid #000; padding: 4px; font-weight: bold; }
+.simple-table td { border: 1px solid #000; padding: 4px; }
+
+.badge-status { font-weight: bold; color: #000 !important; background: transparent !important; }
+
+/* ===================================================================
+   COUNTER CARDS
+   =================================================================== */
+.counters-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 10px; }
+.counter-box {
+  background: var(--bg-card);
+  border-top: 2px solid var(--border-light);
+  border-left: 2px solid var(--border-light);
+  border-right: 2px solid var(--border-dark);
+  border-bottom: 2px solid var(--border-dark);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* ===================================================================
+   TOAST
+   =================================================================== */
+.toast-container { position: fixed; bottom: 10px; right: 10px; z-index: 2000; }
+.toast-msg {
+  background: #ffffcc;
+  border: 1px solid #000;
+  color: #000;
+  padding: 6px 10px;
+  font-size: 11px;
+}
+
+/* Inline overrides to cancel out any colors from HTML */
+[style] {
+  color: inherit !important;
+  background: inherit !important;
+}
+.kpi-subtext b, .triad-row b, .video-hud-footer b, .anomaly-callout b {
+    color: inherit !important;
+}

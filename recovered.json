@@ -1,0 +1,409 @@
+﻿
+{"step_index":27,"source":"MODEL","type":"VIEW_FILE","status":"DONE","created_at":"2026-09-23T10:31:51Z","content":"Cre
+ated At: 2026-09-23T16:01:51+05:30\nCompleted At: 2026-09-23T16:01:51+05:30\nFile Path: 
+`file:///c:/Users/chira/.gemini/antigravity-ide/scratch/parallax-retail-intelligence/index.html`\nTotal Lines: 
+1026\nTotal Bytes: 48093\nShowing lines 1 to 800\nThe following code has been modified to include a line number before 
+every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code 
+should remove the line number, colon, and leading space.\n1: <!DOCTYPE html>\n2: <html lang=\"en\">\n3: <head>\n4:   
+<meta charset=\"UTF-8\">\n5:   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n6:   
+<title>PARALLAX | Qualcomm Edge Retail Intelligence</title>\n7:   \n8:   <!-- Modern Google Fonts -->\n9:   <link 
+rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n10:   <link rel=\"preconnect\" 
+href=\"https://fonts.gstatic.com\" crossorigin>\n11:   <link href=\"https://fonts.googleapis.com/css2?family=JetBrains+
+Mono:wght@500;700;800&family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap\" 
+rel=\"stylesheet\">\n12:   \n13:   <link rel=\"stylesheet\" href=\"styles/main.css\">\n14: </head>\n15: <body>\n16: 
+\n17:   <div class=\"app-container\">\n18:     \n19:     <!-- 
+===================================================================\n20:          SIMPLE HEADER\n21:          
+=================================================================== -->\n22:     <header class=\"top-header\">\n23:    
+   <div class=\"header-inner\">\n24:         \n25:         <div class=\"brand-section\">\n26:           <div 
+class=\"brand-title-group\">\n27:             <h1>\n28:               PARALLAX\n29:               <span 
+class=\"qc-tag\">QUALCOMM EDGE AI</span>\n30:             </h1>\n31:             <div 
+class=\"brand-subtitle\">AI-Powered Retail Intelligence Platform &bull; Smart India Hackathon 2026</div>\n32:          
+ </div>\n33:         </div>\n34: \n35:         <!-- Clean Telemetry Strip -->\n36:         <div 
+class=\"telemetry-strip\">\n37:           <div class=\"telemetry-node\">\n38:             <span 
+class=\"pulse-indicator\"></span>\n39:             <span>Hexagonâ„¢ NPU:</span>\n40:             
+<strong>52%</strong>\n41:           </div>\n42:           <span style=\"color: #cbd5e1;\">|</span>\n43:           <div 
+class=\"telemetry-node\">\n44:             <span>Inference:</span>\n45:             <strong style=\"color: 
+var(--color-blue);\">60.2 FPS</strong>\n46:           </div>\n47:           <span style=\"color: 
+#cbd5e1;\">|</span>\n48:           <div class=\"telemetry-node\">\n49:             <span>Latency:</span>\n50:          
+   <strong style=\"color: var(--color-green);\">3.8 ms</strong>\n51:           </div>\n52:           <span 
+style=\"color: #cbd5e1;\">|</span>\n53:           <div class=\"telemetry-node\">\n54:             <span>DPDP 
+Privacy:</span>\n55:             <strong style=\"color: var(--color-green);\">100% On-Device</strong>\n56:           
+</div>\n57:         </div>\n58: \n59:         <div>\n60:           <span class=\"store-badge\">ðŸ“ Store #104 
+(Indiranagar, Bengaluru)</span>\n61:         </div>\n62: \n63:       </div>\n64:     </header>\n65: \n66:     <!-- 
+===================================================================\n67:          CLEAN NAVIGATION TABS\n68:          
+=================================================================== -->\n69:     <nav class=\"nav-tab-strip\">\n70:    
+   <div class=\"nav-tabs-inner\">\n71:         <button class=\"nav-tab-btn active\" data-tab=\"tab-overview\" 
+id=\"navTabOverview\">\n72:           Live Command Center\n73:         </button>\n74:         <button 
+class=\"nav-tab-btn\" data-tab=\"tab-inventory\" id=\"navTabInventory\">\n75:           Inventory & Out-of-Stock\n76:  
+         <span class=\"badge-alert\">2 ALERTS</span>\n77:         </button>\n78:         <button class=\"nav-tab-btn\" 
+data-tab=\"tab-heatmap\" id=\"navTabHeatmap\">\n79:           Store Heatmap (Video Feed)\n80:         </button>\n81:   
+      <button class=\"nav-tab-btn\" data-tab=\"tab-queue\" id=\"navTabQueue\">\n82:           Billing & Queues\n83:    
+     </button>\n84:         <button class=\"nav-tab-btn\" data-tab=\"tab-architecture\" 
+id=\"navTabArchitecture\">\n85:           Qualcomm Edge Hardware\n86:         </button>\n87:       </div>\n88:     
+</nav>\n89: \n90:     <!-- ===================================================================\n91:          MAIN 
+VIEWPORT\n92:          =================================================================== -->\n93:     <main 
+class=\"main-content\">\n94:       \n95:       <!-- 
+===============================================================\n96:            TAB 1: LIVE COMMAND CENTER 
+(OVERVIEW)\n97:            =============================================================== -->\n98:       <section 
+class=\"tab-pane active\" id=\"tab-overview\">\n99:         \n100:         <!-- Hero Metrics Ribbon (Important Numbers 
+in Bold) -->\n101:         <div class=\"kpi-grid\">\n102:           \n103:           <div class=\"kpi-card\">\n104:    
+         <div class=\"kpi-label\">Active Shoppers</div>\n105:             <div class=\"kpi-value-row\">\n106:          
+     <span class=\"kpi-value bold-number\" id=\"kpiActiveShoppers\">58</span>\n107:               <span 
+class=\"kpi-subtext\">customers inside</span>\n108:             </div>\n109:             <div 
+class=\"kpi-subtext\"><b>+14%</b> vs yesterday &bull; <b>184</b> footfall/hr</div>\n110:           </div>\n111: \n112: 
+          <div class=\"kpi-card\" style=\"border-left: 4px solid var(--color-red);\">\n113:             <div 
+class=\"kpi-label\" style=\"color: var(--color-red);\">Out-of-Stock Alerts</div>\n114:             <div 
+class=\"kpi-value-row\">\n115:               <span class=\"kpi-value bold-number\" style=\"color: var(--color-red);\" 
+id=\"kpiAnomaliesCount\">2 SKUs</span>\n116:             </div>\n117:             <div class=\"kpi-subtext\"><b 
+style=\"color: var(--color-red);\">Shelf = 0, Backroom > 0</b> &bull; <b>â‚¹5,190/hr</b> loss</div>\n118:           
+</div>\n119: \n120:           <div class=\"kpi-card\" style=\"border-left: 4px solid var(--color-amber);\">\n121:      
+       <div class=\"kpi-label\">Average Queue Wait</div>\n122:             <div class=\"kpi-value-row\">\n123:         
+      <span class=\"kpi-value bold-number\" id=\"kpiAvgWait\">2.8 min</span>\n124:             </div>\n125:            
+ <div class=\"kpi-subtext\"><b style=\"color: var(--color-amber);\">Lane 2 spike (4.4 min)</b> &bull; Target: <b>&lt; 
+3.0 min</b></div>\n126:           </div>\n127: \n128:           <div class=\"kpi-card\" style=\"border-left: 4px solid 
+var(--color-green);\">\n129:             <div class=\"kpi-label\">Bandwidth Saved on Edge</div>\n130:             <div 
+class=\"kpi-value-row\">\n131:               <span class=\"kpi-value bold-number\" style=\"color: 
+var(--color-green);\">94.2%</span>\n132:             </div>\n133:             <div class=\"kpi-subtext\"><b>482.6 
+GB/day</b> offload &bull; <b>$3,840/mo</b> saved</div>\n134:           </div>\n135: \n136:         </div>\n137: \n138: 
+        <!-- 2-Column Split: Video Surveillance + Video Heatmap VS Proactive Actions -->\n139:         <div 
+class=\"overview-grid\">\n140:           \n141:           <!-- LEFT COLUMN: Real Video Streams -->\n142:           
+<div>\n143:             \n144:             <!-- Video Feed 1: Vision AI Stream (Real Video of People Walking) 
+-->\n145:             <div class=\"card-panel\">\n146:               <div class=\"card-panel-header\">\n147:           
+      <h2>Live Vision AI Stream</h2>\n148:                 <div class=\"cam-tabs\">\n149:                   <button 
+class=\"cam-btn active\" onclick=\"switchCam('CAM-08', this)\">CAM-08 (Aisle 3 Chilled CPG)</button>\n150:             
+      <button class=\"cam-btn\" onclick=\"switchCam('CAM-13', this)\">CAM-13 (Checkout)</button>\n151:                 
+  <button class=\"cam-btn\" onclick=\"switchCam('CAM-05', this)\">CAM-05 (Dairy)</button>\n152:                   
+<button class=\"cam-btn\" onclick=\"switchCam('CAM-01', this)\">CAM-01 (Entrance)</button>\n153:                 
+</div>\n154:               </div>\n155: \n156:               <div class=\"video-container\">\n157:                 
+<!-- Real Video of People Walking (Untouched & Playing Smoothly) -->\n158:                 <video 
+id=\"realCameraVideo\" src=\"assets/walking_feed.webm\" autoplay loop muted playsinline 
+class=\"camera-real-video\"></video>\n159:                 \n160:                 <!-- Transparent AI Overlay 
+-->\n161:                 <canvas id=\"cameraVisionCanvas\" class=\"canvas-overlay\"></canvas>\n162:                 
+\n163:                 <div class=\"video-hud-header\">\n164:                   <span class=\"rec-dot\"></span>\n165:  
+                 <span id=\"camHudId\">CAM-08 â€¢ AISLE 3 (CHILLED BEVERAGES)</span>\n166:                 
+</div>\n167: \n168:                 <div class=\"video-hud-footer\">\n169:                   <span>QUALCOMM HEXAGONâ„¢ 
+NPU: <b>60.2 FPS</b> (INT8)</span>\n170:                   <span><b>ZERO CLOUD VIDEO STREAMING</b></span>\n171:        
+         </div>\n172:               </div>\n173: \n174:               <div class=\"video-controls\">\n175:             
+    <div style=\"display: flex; gap: 14px; align-items: center;\">\n176:                   <label style=\"cursor: 
+pointer;\"><input type=\"checkbox\" checked id=\"toggleBBoxes\" onchange=\"toggleCamOverlay('boxes')\"> <b>Bounding 
+Boxes</b></label>\n177:                   <label style=\"cursor: pointer;\"><input type=\"checkbox\" checked 
+id=\"toggleTracking\" onchange=\"toggleCamOverlay('tracking')\"> <b>Tracking IDs</b></label>\n178:                   
+<label style=\"cursor: pointer;\"><input type=\"checkbox\" checked id=\"toggleSeg\" 
+onchange=\"toggleCamOverlay('seg')\"> <b>Shelf Alerts</b></label>\n179:                 </div>\n180:                 
+<div style=\"color: var(--text-muted); font-size: 0.78rem;\">\n181:                   Gateway: <b>Qualcomm RB5 
+#02</b>\n182:                 </div>\n183:               </div>\n184:             </div>\n185: \n186:             <!-- 
+Video Feed 2: Live Video Thermal Heatmap (Real Video with Thermal Overlay) -->\n187:             <div 
+class=\"card-panel\">\n188:               <div class=\"card-panel-header\">\n189:                 <div>\n190:          
+         <h2>Live Store Heatmap (Video Feed)</h2>\n191:                   <div style=\"font-size: 0.76rem; color: 
+var(--text-muted);\">Real-time customer dwell density tracked over live video</div>\n192:                 </div>\n193: 
+                <div style=\"font-size: 0.8rem;\">\n194:                   Peak Traffic: <b style=\"color: 
+var(--color-red);\">Aisle 3 (5.4 min dwell)</b>\n195:                 </div>\n196:               </div>\n197: \n198:   
+            <div class=\"video-container\">\n199:                 <!-- Video for Heatmap -->\n200:                 
+<video id=\"heatmapVideo\" src=\"assets/walking_feed.webm\" autoplay loop muted playsinline 
+class=\"camera-real-video\"></video>\n201:                 \n202:                 <!-- Dynamic Thermal Heatmap Overlay 
+Canvas -->\n203:                 <canvas id=\"heatmapVideoCanvas\" class=\"canvas-overlay\"></canvas>\n204: \n205:     
+            <div class=\"video-hud-footer\" style=\"bottom: 10px;\">\n206:                   <span>HEAT DENSITY: <b 
+style=\"color: #38bdf8;\">COLD</b> &rarr; <b style=\"color: #10b981;\">MODERATE</b> &rarr; <b style=\"color: 
+#dc2626;\">HOTSPOT</b></span>\n207:                   <span>TRACKED PATRONS: <b style=\"color: #ffffff;\">58 
+LIVE</b></span>\n208:                 </div>\n209:               </div>\n210: \n211:               <div 
+class=\"video-controls\">\n212:                 <div style=\"display: flex; gap: 14px; align-items: center;\">\n213:   
+                <label style=\"cursor: pointer;\"><input type=\"checkbox\" checked id=\"toggleThermal\" 
+onchange=\"toggleHeatmapOpt('thermal')\"> <b>Thermal Heatmap</b></label>\n214:                   <label 
+style=\"cursor: pointer;\"><input type=\"checkbox\" checked id=\"toggleTrails\" 
+onchange=\"toggleHeatmapOpt('trails')\"> <b>Motion Trails</b></label>\n215:                   <label style=\"cursor: 
+pointer;\"><input type=\"checkbox\" checked id=\"toggleZoneLabels\" onchange=\"toggleHeatmapOpt('labels')\"> <b>Zone 
+Dwell Tags</b></label>\n216:                 </div>\n217:                 <div style=\"color: var(--text-muted); 
+font-size: 0.78rem;\">\n218:                   Camera: <b>Overhead CAM-03</b>\n219:                 </div>\n220:       
+        </div>\n221:             </div>\n222: \n223:           </div>\n224: \n225:           <!-- RIGHT COLUMN: Action 
+Required (Recommendations with Important Texts & Numbers in Bold) -->\n226:           <div class=\"card-panel\">\n227: 
+            <div class=\"card-panel-header\">\n228:               <h2>Action Required (Live AI Decisions)</h2>\n229:   
+            <div style=\"font-size: 0.78rem; color: var(--text-muted);\">\n230:                 <b>What &bull; Why 
+&bull; Next Action</b>\n231:               </div>\n232:             </div>\n233: \n234:             <div 
+class=\"action-items-list\">\n235:               \n236:               <!-- Card 1: Critical Stock-Out (Red Bull) 
+-->\n237:               <div class=\"action-card critical\" id=\"cardRec101\">\n238:                 <div 
+class=\"action-card-top\">\n239:                   <span class=\"badge-status red\">CRITICAL STOCK-OUT</span>\n240:    
+               <span style=\"font-size: 0.72rem; color: var(--text-muted);\">Just now</span>\n241:                 
+</div>\n242: \n243:                 <div class=\"action-card-title\">Red Bull 250ml: Shelf Stock Empty</div>\n244: 
+\n245:                 <div class=\"triad-box\">\n246:                   <div class=\"triad-row\">\n247:               
+      <span class=\"triad-tag\">WHAT:</span>\n248:                     <div>Shelf 3B is at <b>0 cans</b>, but <b>48 
+cans</b> are sitting in <b>Backroom Bay R-04</b>.</div>\n249:                   </div>\n250:                   <div 
+class=\"triad-row\">\n251:                     <span class=\"triad-tag\">WHY:</span>\n252:                     
+<div>Footfall surge in Aisle 3 (<b>22 shoppers in 12 mins</b>) depleted the shelf.</div>\n253:                   
+</div>\n254:                   <div class=\"triad-row\">\n255:                     <span 
+class=\"triad-tag\">ACTION:</span>\n256:                     <div>Dispatch <b>Rahul Sen</b> to restock <b>24 cans</b> 
+from Bay R-04. Prevents <b>â‚¹2,250/hr</b> loss.</div>\n257:                   </div>\n258:                 
+</div>\n259: \n260:                 <div class=\"action-footer\">\n261:                   <button 
+class=\"primary-btn\" onclick=\"demoDispatchAssociate('Rahul Sen', 'Bay R-04', 'Red Bull 250ml', 
+'cardRec101')\">\n262:                     Dispatch Rahul Sen (Bay R-04)\n263:                   </button>\n264:       
+            <button class=\"dismiss-btn\" onclick=\"dismissCard('cardRec101')\">Dismiss</button>\n265:                 
+</div>\n266:               </div>\n267: \n268:               <!-- Card 2: Queue Congestion Predicted -->\n269:         
+      <div class=\"action-card warning\" id=\"cardRec102\">\n270:                 <div 
+class=\"action-card-top\">\n271:                   <span class=\"badge-status amber\">QUEUE WARNING</span>\n272:       
+            <span style=\"font-size: 0.72rem; color: var(--text-muted);\">2 mins ago</span>\n273:                 
+</div>\n274: \n275:                 <div class=\"action-card-title\">Billing Queue Congestion Predicted</div>\n276: 
+\n277:                 <div class=\"triad-box\">\n278:                   <div class=\"triad-row\">\n279:               
+      <span class=\"triad-tag\">WHAT:</span>\n280:                     <div>Counter 2 wait time reached <b>4.4 
+minutes</b> with <b>6 customers</b> in line.</div>\n281:                   </div>\n282:                   <div 
+class=\"triad-row\">\n283:                     <span class=\"triad-tag\">WHY:</span>\n284:                     
+<div>Edge AI detected <b>7 large shopping carts</b> approaching checkout in <b>3 minutes</b>.</div>\n285:              
+     </div>\n286:                   <div class=\"triad-row\">\n287:                     <span 
+class=\"triad-tag\">ACTION:</span>\n288:                     <div>Open <b>Counter 5 (Standby)</b>. Alert cashier 
+<b>Maya K.</b> to log in now.</div>\n289:                   </div>\n290:                 </div>\n291: \n292:           
+      <div class=\"action-footer\">\n293:                   <button class=\"primary-btn\" onclick=\"demoOpenCounter(5, 
+'Maya K.', 'cardRec102')\">\n294:                     Open Counter 5 (Notify Maya K.)\n295:                   
+</button>\n296:                   <button class=\"dismiss-btn\" 
+onclick=\"dismissCard('cardRec102')\">Dismiss</button>\n297:                 </div>\n298:               </div>\n299: 
+\n300:               <!-- Card 3: Misplaced Item -->\n301:               <div class=\"action-card info\" 
+id=\"cardRec103\">\n302:                 <div class=\"action-card-top\">\n303:                   <span 
+class=\"badge-status\" style=\"background: #ede9fe; color: #6d28d9;\">MISPLACED ITEM</span>\n304:                   
+<span style=\"font-size: 0.72rem; color: var(--text-muted);\">6 mins ago</span>\n305:                 </div>\n306: 
+\n307:                 <div class=\"action-card-title\">High-Value Item Abandoned in Wrong Aisle</div>\n308: \n309:    
+             <div class=\"triad-box\">\n310:                   <div class=\"triad-row\">\n311:                     
+<span class=\"triad-tag\">WHAT:</span>\n312:                     <div><b>Extra Virgin Olive Oil (â‚¹650)</b> was 
+placed in <b>Aisle 4 Cereals bay</b>.</div>\n313:                   </div>\n314:                   <div 
+class=\"triad-row\">\n315:                     <span class=\"triad-tag\">WHY:</span>\n316:                     
+<div>Customer abandoned product on cereal shelf after picking an alternative.</div>\n317:                   
+</div>\n318:                   <div class=\"triad-row\">\n319:                     <span 
+class=\"triad-tag\">ACTION:</span>\n320:                     <div>Task floor runner to return item to <b>Gourmet Bay 
+2D</b> before damage occurs.</div>\n321:                   </div>\n322:                 </div>\n323: \n324:            
+     <div class=\"action-footer\">\n325:                   <button class=\"primary-btn\" 
+onclick=\"demoResolveMisplace('cardRec103')\">\n326:                     Assign Retrieval Runner\n327:                 
+  </button>\n328:                   <button class=\"dismiss-btn\" 
+onclick=\"dismissCard('cardRec103')\">Dismiss</button>\n329:                 </div>\n330:               </div>\n331: 
+\n332:               <!-- Card 4: Cold Zone Underperformance -->\n333:               <div class=\"action-card\" 
+id=\"cardRec104\" style=\"border-left: 4px solid var(--color-blue);\">\n334:                 <div 
+class=\"action-card-top\">\n335:                   <span class=\"badge-status\" style=\"background: 
+var(--color-blue-light); color: var(--color-blue-dark);\">COLD ZONE</span>\n336:                   <span 
+style=\"font-size: 0.72rem; color: var(--text-muted);\">14 mins ago</span>\n337:                 </div>\n338: \n339:   
+              <div class=\"action-card-title\">Aisle 4 (Breakfast Cereals) Traffic Low</div>\n340: \n341:              
+   <div class=\"triad-box\">\n342:                   <div class=\"triad-row\">\n343:                     <span 
+class=\"triad-tag\">WHAT:</span>\n344:                     <div>Footfall dropped <b>42% below daily average</b>. 
+Average dwell time is only <b>1.5 minutes</b>.</div>\n345:                   </div>\n346:                   <div 
+class=\"triad-row\">\n347:                     <span class=\"triad-tag\">WHY:</span>\n348:                     <div>No 
+promotional endcap display and poor rear illumination detected.</div>\n349:                   </div>\n350:             
+      <div class=\"triad-row\">\n351:                     <span class=\"triad-tag\">ACTION:</span>\n352:               
+      <div>Push dynamic digital promo signage: <b>Muesli + Almond Milk 20% bundle discount</b>.</div>\n353:            
+       </div>\n354:                 </div>\n355: \n356:                 <div class=\"action-footer\">\n357:            
+       <button class=\"primary-btn\" onclick=\"showToast('ðŸ“‹ Promotional signage pushed to Aisle 4 display.', 
+'success')\">\n358:                     Push Signage Promo\n359:                   </button>\n360:                   
+<button class=\"dismiss-btn\" onclick=\"dismissCard('cardRec104')\">Dismiss</button>\n361:                 
+</div>\n362:               </div>\n363: \n364:             </div>\n365:           </div>\n366: \n367:         
+</div>\n368: \n369:       </section>\n370: \n371:       <!-- 
+===============================================================\n372:            TAB 2: INVENTORY & OUT-OF-STOCK\n373: 
+           =============================================================== -->\n374:       <section class=\"tab-pane\" 
+id=\"tab-inventory\">\n375:         \n376:         <div class=\"anomaly-callout\">\n377:           <div>\n378:         
+    <div style=\"font-size: 1.05rem; font-weight: 800; color: #991b1b; margin-bottom: 2px;\">\n379:               
+Critical Retail Problem: Shelf Stock = 0, Backroom Stock &gt; 0\n380:             </div>\n381:             <div 
+style=\"font-size: 0.85rem; color: #475569;\">\n382:               The physical shelf is empty, but the ERP database 
+shows inventory exists in the store. \n383:               Customers cannot find the item, leading to <b>phantom lost 
+revenue</b>.\n384:             </div>\n385:           </div>\n386:           <div style=\"text-align: right;\">\n387:  
+           <div class=\"bold-number\" style=\"font-size: 1.6rem; color: var(--color-red);\">â‚¹5,190 / hr</div>\n388:  
+           <div style=\"font-size: 0.72rem; font-weight: 700; color: #991b1b; text-transform: uppercase;\">Lost 
+Revenue Rate</div>\n389:           </div>\n390:         </div>\n391: \n392:         <div class=\"card-panel\">\n393:   
+        <div class=\"card-panel-header\">\n394:             <h2>Real-Time Shelf Inventory & Planogram 
+Compliance</h2>\n395:             <div style=\"font-size: 0.8rem; color: var(--text-muted);\">\n396:               
+Vision AI facing count vs Backroom ERP data\n397:             </div>\n398:           </div>\n399: \n400:           
+<table class=\"simple-table\">\n401:             <thead>\n402:               <tr>\n403:                 <th>Product 
+Name</th>\n404:                 <th>Aisle & Bay Location</th>\n405:                 <th>Shelf Stock</th>\n406:         
+        <th>Backroom Stock</th>\n407:                 <th>Hourly Velocity</th>\n408:                 <th>Lost Rev / 
+Hr</th>\n409:                 <th>Status</th>\n410:                 <th>Action</th>\n411:               </tr>\n412:    
+         </thead>\n413:             <tbody>\n414:               \n415:               <!-- Red Bull -->\n416:           
+    <tr id=\"row-SKU-8041\">\n417:                 <td>\n418:                   <b>Red Bull Energy Drink 
+(250ml)</b>\n419:                   <div style=\"font-size: 0.72rem; color: var(--text-muted);\">SKU-8041 &bull; 
+Beverages</div>\n420:                 </td>\n421:                 <td>\n422:                   <b>Aisle 3 (Chilled 
+CPG)</b>\n423:                   <div style=\"font-size: 0.72rem; color: var(--text-muted);\">Bay 3B &bull; Level 
+3</div>\n424:                 </td>\n425:                 <td>\n426:                   <b style=\"font-size: 1.1rem; 
+color: var(--color-red);\">0 units</b>\n427:                 </td>\n428:                 <td>\n429:                   
+<b style=\"font-size: 1.1rem; color: var(--color-blue-dark);\">48 units</b>\n430:                   <div 
+style=\"font-size: 0.72rem; color: var(--text-muted);\">Bay R-04</div>\n431:                 </td>\n432:               
+  <td><b>18 cans/hr</b></td>\n433:                 <td><b style=\"color: var(--color-red);\">â‚¹2,250</b></td>\n434:   
+              <td><span class=\"badge-status red\">CRITICAL OOS</span></td>\n435:                 <td>\n436:           
+        <button class=\"primary-btn\" onclick=\"demoRestockTable('SKU-8041', 'Red Bull 250ml', 'Bay R-04')\">\n437:    
+                 Restock 24 Units\n438:                   </button>\n439:                 </td>\n440:               
+</tr>\n441: \n442:               <!-- Arabica Coffee -->\n443:               <tr id=\"row-SKU-5521\">\n444:            
+     <td>\n445:                   <b>Single Origin Arabica Beans (250g)</b>\n446:                   <div 
+style=\"font-size: 0.72rem; color: var(--text-muted);\">SKU-5521 &bull; Beverages</div>\n447:                 
+</td>\n448:                 <td>\n449:                   <b>Aisle 3 (Coffee & Tea)</b>\n450:                   <div 
+style=\"font-size: 0.72rem; color: var(--text-muted);\">Bay 3A &bull; Level 2</div>\n451:                 </td>\n452:  
+               <td>\n453:                   <b style=\"font-size: 1.1rem; color: var(--color-red);\">0 units</b>\n454: 
+                </td>\n455:                 <td>\n456:                   <b style=\"font-size: 1.1rem; color: 
+var(--color-blue-dark);\">16 packs</b>\n457:                   <div style=\"font-size: 0.72rem; color: 
+var(--text-muted);\">Bay R-03</div>\n458:                 </td>\n459:                 <td><b>6 packs/hr</b></td>\n460: 
+                <td><b style=\"color: var(--color-red);\">â‚¹2,940</b></td>\n461:                 <td><span 
+class=\"badge-status red\">CRITICAL OOS</span></td>\n462:                 <td>\n463:                   <button 
+class=\"primary-btn\" onclick=\"demoRestockTable('SKU-5521', 'Arabica Beans', 'Bay R-03')\">\n464:                     
+Restock 12 Units\n465:                   </button>\n466:                 </td>\n467:               </tr>\n468: \n469:  
+             <!-- Oat Milk -->\n470:               <tr>\n471:                 <td>\n472:                   <b>Oat Milk 
+Barista Edition (1L)</b>\n473:                   <div style=\"font-size: 0.72rem; color: var(--text-muted);\">SKU-3120 
+&bull; Dairy</div>\n474:                 </td>\n475:                 <td>\n476:                   <b>Aisle 2 
+(Dairy)</b>\n477:                   <div style=\"font-size: 0.72rem; color: var(--text-muted);\">Bay 2A &bull; Level 
+2</div>\n478:                 </td>\n479:                 <td>\n480:                   <b style=\"font-size: 1.1rem; 
+color: var(--color-amber);\">3 units</b>\n481:                 </td>\n482:                 <td>\n483:                  
+ <b style=\"font-size: 1.1rem; color: var(--text-main);\">36 units</b>\n484:                   <div style=\"font-size: 
+0.72rem; color: var(--text-muted);\">Bay R-01</div>\n485:                 </td>\n486:                 <td><b>8 
+units/hr</b></td>\n487:                 <td><b style=\"color: var(--color-amber);\">â‚¹960</b></td>\n488:              
+   <td><span class=\"badge-status amber\">LOW STOCK</span></td>\n489:                 <td>\n490:                   
+<button class=\"dismiss-btn\" onclick=\"showToast('Scheduled replenishment task created.', 'success')\">\n491:         
+            Queue Restock\n492:                   </button>\n493:                 </td>\n494:               
+</tr>\n495: \n496:               <!-- Olive Oil -->\n497:               <tr>\n498:                 <td>\n499:          
+         <b>Extra Virgin Olive Oil (500ml)</b>\n500:                   <div style=\"font-size: 0.72rem; color: 
+var(--text-muted);\">SKU-9942 &bull; Gourmet</div>\n501:                 </td>\n502:                 <td>\n503:        
+           <b>Aisle 2 (Gourmet Oils)</b>\n504:                   <div style=\"font-size: 0.72rem; color: #7c3aed; 
+font-weight: 700;\">Found in Aisle 4 Cereals!</div>\n505:                 </td>\n506:                 <td>\n507:       
+            <b style=\"font-size: 1.1rem; color: var(--text-main);\">12 units</b>\n508:                 </td>\n509:    
+             <td>\n510:                   <b style=\"font-size: 1.1rem; color: var(--text-main);\">20 units</b>\n511:  
+               </td>\n512:                 <td><b>3 units/hr</b></td>\n513:                 <td><b>â‚¹0</b></td>\n514: 
+                <td><span class=\"badge-status\" style=\"background: #ede9fe; color: 
+#6d28d9;\">MISPLACED</span></td>\n515:                 <td>\n516:                   <button class=\"dismiss-btn\" 
+onclick=\"showToast('Floor runner assigned to return Olive Oil.', 'success')\">\n517:                     Relocate 
+SKU\n518:                   </button>\n519:                 </td>\n520:               </tr>\n521: \n522:               
+<!-- Dark Chocolate -->\n523:               <tr>\n524:                 <td>\n525:                   <b>Dark Chocolate 
+85% Sea Salt (100g)</b>\n526:                   <div style=\"font-size: 0.72rem; color: var(--text-muted);\">SKU-4402 
+&bull; Sweets</div>\n527:                 </td>\n528:                 <td>\n529:                   <b>Aisle 5 
+(Impulse)</b>\n530:                   <div style=\"font-size: 0.72rem; color: var(--text-muted);\">Bay 5B &bull; Level 
+3</div>\n531:                 </td>\n532:                 <td>\n533:                   <b style=\"font-size: 1.1rem; 
+color: var(--color-green);\">18 units</b>\n534:                 </td>\n535:                 <td>\n536:                 
+  <b style=\"font-size: 1.1rem; color: var(--text-main);\">60 units</b>\n537:                 </td>\n538:              
+   <td><b>14 units/hr</b></td>\n539:                 <td><b>â‚¹0</b></td>\n540:                 <td><span 
+class=\"badge-status green\">HEALTHY</span></td>\n541:                 <td>\n542:                   <span 
+style=\"color: var(--color-green); font-weight: 700; font-size: 0.8rem;\">âœ“ Optimal</span>\n543:                 
+</td>\n544:               </tr>\n545: \n546:             </tbody>\n547:           </table>\n548:         </div>\n549: 
+\n550:       </section>\n551: \n552:       <!-- ===============================================================\n553:  
+          TAB 3: STORE HEATMAP (VIDEO FEED)\n554:            
+=============================================================== -->\n555:       <section class=\"tab-pane\" 
+id=\"tab-heatmap\">\n556:         \n557:         <div style=\"display: grid; grid-template-columns: 1.4fr 1fr; gap: 
+24px; margin-bottom: 24px;\">\n558:           \n559:           <!-- Large Heatmap Video Viewport -->\n560:           
+<div class=\"card-panel\">\n561:             <div class=\"card-panel-header\">\n562:               <h2>CCTV Thermal 
+Density Surveillance (CAM-03)</h2>\n563:               <div style=\"font-size: 0.8rem; color: 
+var(--text-muted);\">\n564:                 Hexagon NPU Thermal False-Color Layer\n565:               </div>\n566:     
+        </div>\n567: \n568:             <div class=\"video-container\" style=\"height: 440px;\">\n569:               
+<video id=\"heatmapVideoDedicated\" src=\"assets/walking_feed.webm\" autoplay loop muted playsinline 
+class=\"camera-real-video\"></video>\n570:               <canvas id=\"heatmapVideoCanvasDedicated\" 
+class=\"canvas-overlay\"></canvas>\n571: \n572:               <div class=\"video-hud-header\">\n573:                 
+<span class=\"rec-dot\"></span>\n574:                 <span>OVERHEAD CAM-03 â€¢ STORE AISLE DWELL HEATMAP</span>\n575: 
+              </div>\n576: \n577:               <div class=\"video-hud-footer\">\n578:                 <span>FPS: 
+<b>60.2</b> &bull; DWELL ALGORITHM: <b>QUALCOMM BYTE-TRACK</b></span>\n579:                 <span>STATUS: <b>REAL-TIME 
+THERMAL VIDEO</b></span>\n580:               </div>\n581:             </div>\n582:           </div>\n583: \n584:       
+    <!-- Aisle Dwell Time Matrix & Bold Numbers -->\n585:           <div class=\"card-panel\">\n586:             <div 
+class=\"card-panel-header\">\n587:               <h2>Aisle Traffic & Dwell Time Rankings</h2>\n588:               
+<span class=\"qc-tag\">LIVE STATS</span>\n589:             </div>\n590: \n591:             <div style=\"padding: 20px; 
+display: flex; flex-direction: column; gap: 16px;\">\n592:               \n593:               <div>\n594:              
+   <div style=\"display: flex; justify-content: space-between; margin-bottom: 4px;\">\n595:                   <b>Aisle 
+3: Chilled CPG & Beverages</b>\n596:                   <b style=\"color: var(--color-red);\">5.4 min avg &bull; 
+205/hr</b>\n597:                 </div>\n598:                 <div style=\"height: 10px; background: #e2e8f0; 
+border-radius: 5px; overflow: hidden;\">\n599:                   <div style=\"width: 95%; height: 100%; background: 
+var(--color-red);\"></div>\n600:                 </div>\n601:               </div>\n602: \n603:               
+<div>\n604:                 <div style=\"display: flex; justify-content: space-between; margin-bottom: 4px;\">\n605:   
+                <b>Aisle 1: Fresh Produce & Artisan Bakery</b>\n606:                   <b style=\"color: 
+var(--color-green);\">4.6 min avg &bull; 142/hr</b>\n607:                 </div>\n608:                 <div 
+style=\"height: 10px; background: #e2e8f0; border-radius: 5px; overflow: hidden;\">\n609:                   <div 
+style=\"width: 78%; height: 100%; background: var(--color-green);\"></div>\n610:                 </div>\n611:          
+     </div>\n612: \n613:               <div>\n614:                 <div style=\"display: flex; justify-content: 
+space-between; margin-bottom: 4px;\">\n615:                   <b>Checkout Zone (Lanes 1-6)</b>\n616:                   
+<b style=\"color: var(--color-amber);\">3.8 min avg &bull; 175/hr</b>\n617:                 </div>\n618:               
+  <div style=\"height: 10px; background: #e2e8f0; border-radius: 5px; overflow: hidden;\">\n619:                   
+<div style=\"width: 65%; height: 100%; background: var(--color-amber);\"></div>\n620:                 </div>\n621:     
+          </div>\n622: \n623:               <div>\n624:                 <div style=\"display: flex; justify-content: 
+space-between; margin-bottom: 4px;\">\n625:                   <b>Aisle 2: Dairy & Plant Milks</b>\n626:                
+   <b style=\"color: var(--color-blue);\">3.2 min avg &bull; 118/hr</b>\n627:                 </div>\n628:             
+    <div style=\"height: 10px; background: #e2e8f0; border-radius: 5px; overflow: hidden;\">\n629:                   
+<div style=\"width: 55%; height: 100%; background: var(--color-blue);\"></div>\n630:                 </div>\n631:      
+         </div>\n632: \n633:               <div>\n634:                 <div style=\"display: flex; justify-content: 
+space-between; margin-bottom: 4px;\">\n635:                   <b>Aisle 4: Breakfast Cereals (Cold Zone)</b>\n636:      
+             <b style=\"color: var(--text-muted);\">1.5 min avg &bull; 62/hr</b>\n637:                 </div>\n638:    
+             <div style=\"height: 10px; background: #e2e8f0; border-radius: 5px; overflow: hidden;\">\n639:            
+       <div style=\"width: 25%; height: 100%; background: #94a3b8;\"></div>\n640:                 </div>\n641:         
+      </div>\n642: \n643:             </div>\n644:           </div>\n645: \n646:         </div>\n647: \n648:       
+</section>\n649: \n650:       <!-- ===============================================================\n651:            
+TAB 4: BILLING & QUEUES\n652:            =============================================================== -->\n653:     
+  <section class=\"tab-pane\" id=\"tab-queue\">\n654:         \n655:         <div class=\"anomaly-callout\" 
+style=\"background: var(--color-amber-light); border-color: #fde68a; border-left-color: var(--color-amber);\">\n656:   
+        <div>\n657:             <div style=\"font-size: 1.05rem; font-weight: 800; color: #92400e; margin-bottom: 
+2px;\">\n658:               Predictive Bottleneck: Counter 2 Nearing Congestion\n659:             </div>\n660:         
+    <div style=\"font-size: 0.85rem; color: #78350f;\">\n661:               Wait time is <b>4.4 minutes</b>. 7 
+shopping carts are heading to checkout. Opening standby Counter 5 will drop wait time to <b>1.8 minutes</b>.\n662:     
+        </div>\n663:           </div>\n664:           <div>\n665:             <button class=\"primary-btn\" 
+style=\"padding: 10px 18px; font-size: 0.85rem;\" onclick=\"demoOpenCounter(5, 'Maya K.')\">\n666:               âš¡ 
+Open Counter 5\n667:             </button>\n668:           </div>\n669:         </div>\n670: \n671:         <div 
+class=\"counters-grid\">\n672:           \n673:           <div class=\"counter-box healthy\">\n674:             <div 
+style=\"display: flex; justify-content: space-between;\">\n675:               <b>Counter 1 (Express &lt; 10 
+items)</b>\n676:               <span class=\"badge-status green\">ACTIVE</span>\n677:             </div>\n678:         
+    <div style=\"font-size: 0.78rem; color: var(--text-muted);\">Cashier: <b>Arjun Verma</b></div>\n679:             
+<div style=\"display: flex; justify-content: space-between; font-size: 0.85rem;\">\n680:               <span>Queue: 
+<b>4 customers</b></span>\n681:               <span>Wait: <b style=\"color: var(--color-green);\">2.1 
+min</b></span>\n682:             </div>\n683:           </div>\n684: \n685:           <div class=\"counter-box 
+congested\" id=\"counterCard2\">\n686:             <div style=\"display: flex; justify-content: 
+space-between;\">\n687:               <b>Counter 2 (Standard Lane)</b>\n688:               <span class=\"badge-status 
+amber\">CONGESTED</span>\n689:             </div>\n690:             <div style=\"font-size: 0.78rem; color: 
+var(--text-muted);\">Cashier: <b>Sneha Patil</b></div>\n691:             <div style=\"display: flex; justify-content: 
+space-between; font-size: 0.85rem;\">\n692:               <span>Queue: <b id=\"counter2QueueCount\">6 
+customers</b></span>\n693:               <span>Wait: <b style=\"color: var(--color-amber);\" 
+id=\"counter2WaitTime\">4.4 min</b></span>\n694:             </div>\n695:           </div>\n696: \n697:           <div 
+class=\"counter-box healthy\">\n698:             <div style=\"display: flex; justify-content: space-between;\">\n699:  
+             <b>Counter 3 (Standard Lane)</b>\n700:               <span class=\"badge-status 
+green\">ACTIVE</span>\n701:             </div>\n702:             <div style=\"font-size: 0.78rem; color: 
+var(--text-muted);\">Cashier: <b>Rohan Nair</b></div>\n703:             <div style=\"display: flex; justify-content: 
+space-between; font-size: 0.85rem;\">\n704:               <span>Queue: <b>5 customers</b></span>\n705:               
+<span>Wait: <b>3.8 min</b></span>\n706:             </div>\n707:           </div>\n708: \n709:           <div 
+class=\"counter-box healthy\">\n710:             <div style=\"display: flex; justify-content: space-between;\">\n711:  
+             <b>Counter 4 (Self-Checkout)</b>\n712:               <span class=\"badge-status 
+green\">ACTIVE</span>\n713:             </div>\n714:             <div style=\"font-size: 0.78rem; color: 
+var(--text-muted);\">AI Automated Lane</div>\n715:             <div style=\"display: flex; justify-content: 
+space-between; font-size: 0.85rem;\">\n716:               <span>Queue: <b>2 customers</b></span>\n717:               
+<span>Wait: <b style=\"color: var(--color-green);\">1.2 min</b></span>\n718:             </div>\n719:           
+</div>\n720: \n721:           <div class=\"counter-box standby\" id=\"counterCard5\">\n722:             <div 
+style=\"display: flex; justify-content: space-between;\">\n723:               <b>Counter 5 (Standby 
+Overflow)</b>\n724:               <span class=\"badge-status amber\" id=\"counter5Badge\">STANDBY READY</span>\n725:   
+          </div>\n726:             <div style=\"font-size: 0.78rem; color: var(--text-muted);\" 
+id=\"counter5Cashier\">Assigned: <b>Maya K. (On Standby)</b></div>\n727:             <div style=\"display: flex; 
+justify-content: space-between; font-size: 0.85rem;\">\n728:               <span>Queue: <b 
+id=\"counter5QueueCount\">0</b></span>\n729:               <span>Status: <b style=\"color: var(--color-blue);\" 
+id=\"counter5ActionStatus\">Recommended Open</b></span>\n730:             </div>\n731:           </div>\n732: \n733:   
+        <div class=\"counter-box\" style=\"opacity: 0.6;\">\n734:             <div style=\"display: flex; 
+justify-content: space-between;\">\n735:               <b>Counter 6 (Maintenance)</b>\n736:               <span 
+class=\"badge-status\" style=\"background: #e2e8f0; color: #64748b;\">CLOSED</span>\n737:             </div>\n738:     
+        <div style=\"font-size: 0.78rem; color: var(--text-muted);\">Next Shift: 17:00 IST</div>\n739:             
+<div style=\"font-size: 0.85rem; color: var(--text-muted);\">-</div>\n740:           </div>\n741: \n742:         
+</div>\n743: \n744:       </section>\n745: \n746:       <!-- 
+===============================================================\n747:            TAB 5: QUALCOMM EDGE HARDWARE\n748:   
+         =============================================================== -->\n749:       <section class=\"tab-pane\" 
+id=\"tab-architecture\">\n750:         \n751:         <div class=\"card-panel\" style=\"padding: 24px; margin-bottom: 
+24px;\">\n752:           <h2 style=\"font-size: 1.3rem; margin-bottom: 8px;\">Qualcomm Snapdragon / RB5 Edge AI 
+Processing</h2>\n753:           <p style=\"color: var(--text-body); max-width: 840px; margin-bottom: 20px;\">\n754:    
+         PARALLAX executes computer vision models directly on store gateways powered by the <b>Qualcomm Hexagonâ„¢ 
+NPU</b>. \n755:             Raw customer CCTV video stays inside the storeâ€”only anonymized vector counts and stock 
+levels are generated.\n756:           </p>\n757: \n758:           <div style=\"display: grid; grid-template-columns: 
+repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;\">\n759:             <div style=\"background: #f8fafc; border: 1px 
+solid var(--border-color); padding: 14px; border-radius: 6px;\">\n760:               <div style=\"font-size: 0.72rem; 
+color: var(--text-muted); font-weight: 700; text-transform: uppercase;\">Edge Latency</div>\n761:               <div 
+class=\"bold-number\" style=\"font-size: 1.5rem; color: var(--color-blue);\">3.8 ms</div>\n762:             
+</div>\n763:             <div style=\"background: #f8fafc; border: 1px solid var(--border-color); padding: 14px; 
+border-radius: 6px;\">\n764:               <div style=\"font-size: 0.72rem; color: var(--text-muted); font-weight: 
+700; text-transform: uppercase;\">Cloud Bandwidth Offload</div>\n765:               <div class=\"bold-number\" 
+style=\"font-size: 1.5rem; color: var(--color-green);\">94.2%</div>\n766:             </div>\n767:             <div 
+style=\"background: #f8fafc; border: 1px solid var(--border-color); padding: 14px; border-radius: 6px;\">\n768:        
+       <div style=\"font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: 
+uppercase;\">Privacy Compliance</div>\n769:               <div class=\"bold-number\" style=\"font-size: 1.5rem; color: 
+var(--color-green);\">100% DPDP</div>\n770:             </div>\n771:             <div style=\"background: #f8fafc; 
+border: 1px solid var(--border-color); padding: 14px; border-radius: 6px;\">\n772:               <div 
+style=\"font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;\">Offline 
+Resiliency</div>\n773:               <div class=\"bold-number\" style=\"font-size: 1.5rem; color: 
+var(--text-main);\">100% Active</div>\n774:             </div>\n775:           </div>\n776:         </div>\n777: 
+\n778:         <div style=\"display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 
+16px;\">\n779:           \n780:           <div class=\"card-panel\" style=\"padding: 18px;\">\n781:             <div 
+style=\"display: flex; justify-content: space-between; margin-bottom: 8px;\">\n782:               <b>Node Alpha 
+(Qualcomm RB5)</b>\n783:               <span class=\"badge-status green\">ONLINE</span>\n784:             </div>\n785: 
+            <div style=\"font-size: 0.78rem; color: var(--text-muted); margin-bottom: 10px;\">CAM 01-04 (Entrance & 
+Bakery)</div>\n786:             <div style=\"font-size: 0.85rem;\">NPU Load: <b>44%</b> &bull; FPS: <b>60.2</b> &bull; 
+Latency: <b>3.6ms</b></div>\n787:           </div>\n788: \n789:           <div class=\"card-panel\" style=\"padding: 
+18px;\">\n790:             <div style=\"display: flex; justify-content: space-between; margin-bottom: 8px;\">\n791:    
+           <b>Node Beta (Qualcomm RB5)</b>\n792:               <span class=\"badge-status green\">ONLINE</span>\n793:  
+           </div>\n794:             <div style=\"font-size: 0.78rem; color: var(--text-muted); margin-bottom: 
+10px;\">CAM 05-08 (Aisle 2 & 3 CPG)</div>\n795:             <div style=\"font-size: 0.85rem;\">NPU Load: <b>58%</b> 
+&bull; FPS: <b>59.8</b> &bull; Latency: <b>4.1ms</b></div>\n796:           </div>\n797: \n798:           <div 
+class=\"card-panel\" style=\"padding: 18px;\">\n799:             <div style=\"display: flex; justify-content: 
+space-between; margin-bottom: 8px;\">\n800:               <b>Node Gamma (Snapdragon Edge)</b>\nThe above content does 
+NOT show the entire file contents. If you need to view any lines of the file which were not shown to complete your 
+task, call this tool again to view those lines.\n"}
+
+
